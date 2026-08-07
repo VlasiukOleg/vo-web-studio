@@ -29,9 +29,30 @@
           прибуток.
         </h1>
         
-        <p class="text-base md:text-lg text-gray-300 mb-10 leading-relaxed max-w-xl font-light">
-          Привіт, я Олег Власюк. Перетворюю складні бізнес-ідеї на потужні кастомні веб-продукти з бездоганним дизайном та блискавичною швидкістю.
-        </p>
+        <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-10 max-w-xl">
+          <div class="shrink-0 relative">
+            <!-- Світіння навколо відео -->
+            <div class="absolute inset-0 bg-cyan-400 rounded-full blur-[10px] opacity-40 animate-pulse"></div>
+            <img 
+              v-show="!showVideo"
+              src="/video/hello-hero-static.png" 
+              class="relative w-20 h-20 md:w-28 md:h-28 rounded-full object-cover object-[95%_center] border-2 border-cyan-400/80 shadow-lg z-10" 
+              alt="Олег Власюк"
+            />
+            <video 
+              v-show="showVideo"
+              ref="heroVideo"
+              src="/video/hello-hero.mp4" 
+              class="relative w-20 h-20 md:w-28 md:h-28 rounded-full object-cover object-[95%_center] border-2 border-cyan-400/80 shadow-lg z-10" 
+              loop 
+              muted 
+              playsinline
+            ></video>
+          </div>
+          <p class="text-base md:text-lg text-gray-300 leading-relaxed font-light min-h-[90px] pt-1">
+            {{ typedText }}<span class="animate-pulse text-cyan-400">|</span>
+          </p>
+        </div>
         
         <div class="flex flex-col sm:flex-row gap-4">
           <UButton size="lg" color="gray" class="bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-black px-8 py-4 text-base justify-center rounded-none uppercase tracking-wider group transition-all border-none shadow-lg shadow-purple-500/20">
@@ -48,18 +69,38 @@
 </template>
 
 <script setup>
-const images = [
-  'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1481481600465-36a08f28d4ea?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&h=300&fit=crop'
-]
+import { ref, onMounted } from 'vue'
+
+const fullText = 'Привіт, я Олег Власюк. Перетворюю складні бізнес-ідеї на потужні кастомні веб-продукти з бездоганним дизайном та блискавичною швидкістю.'
+const typedText = ref('')
+const heroVideo = ref(null)
+const showVideo = ref(false)
+
+onMounted(() => {
+  let i = 0
+  const typeWriter = () => {
+    if (i === 0) {
+      showVideo.value = true
+      if (heroVideo.value) {
+        heroVideo.value.play()
+      }
+    }
+    
+    if (i < fullText.length) {
+      typedText.value += fullText.charAt(i)
+      i++
+      // Збільшена затримка на ~20% для ефекту реального друку
+      setTimeout(typeWriter, Math.random() * 35 + 20)
+    } else {
+      // Коли текст надруковано, ховаємо відео, показуємо статику
+      showVideo.value = false
+      if (heroVideo.value) {
+        heroVideo.value.pause()
+      }
+    }
+  }
+  
+  // Починаємо друк через невелику затримку після завантаження сторінки
+  setTimeout(typeWriter, 500)
+})
 </script>

@@ -25,7 +25,7 @@
                 <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Швидкість загрузки</div>
               </div>
             </div>
-            <UButton size="xl" variant="outline" color="gray" class="font-bold px-8 py-4 text-sm justify-center rounded-none text-white border-white/20 hover:bg-white hover:text-black uppercase tracking-wider transition-all">
+            <UButton size="xl" variant="outline" class="font-bold px-8 py-4 text-sm justify-center rounded-none text-white border-white/20 hover:bg-white hover:text-black uppercase tracking-wider transition-all">
               Детальний кейс
             </UButton>
           </div>
@@ -74,7 +74,7 @@
                 <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Технологія</div>
               </div>
             </div>
-            <UButton size="xl" variant="outline" color="gray" class="font-bold px-8 py-4 text-sm justify-center rounded-none text-white border-white/20 hover:bg-white hover:text-black uppercase tracking-wider transition-all">
+            <UButton size="xl" variant="outline" class="font-bold px-8 py-4 text-sm justify-center rounded-none text-white border-white/20 hover:bg-white hover:text-black uppercase tracking-wider transition-all">
               Детальний кейс
             </UButton>
           </div>
