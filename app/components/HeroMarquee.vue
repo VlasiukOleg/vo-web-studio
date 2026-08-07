@@ -5,7 +5,7 @@
       orientation="vertical"
       :overlay="false"
       :ui="{
-        root: '[--duration:40s] absolute w-[260px] left-[485px] -top-[300px] h-[1040px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
+        root: '[--duration:40s] absolute w-[260px] left-[10px] md:left-[485px] -top-[300px] h-[1040px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
       }"
     >
       <img
@@ -16,14 +16,14 @@
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
         loading="lazy"
-        class="aspect-square object-cover bg-white"
+        class="aspect-square object-cover bg-white opacity-40 md:opacity-100 transition-opacity duration-300"
       />
     </UMarquee>
     <UMarquee
       orientation="vertical"
       :overlay="false"
       :ui="{
-        root: '[--duration:40s] absolute w-[260px] -top-[400px] left-[800px] h-[1160px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
+        root: '[--duration:40s] absolute w-[260px] -top-[400px] left-[310px] md:left-[800px] h-[1160px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
       }"
     >
       <img
@@ -34,7 +34,7 @@
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
         loading="lazy"
-        class="aspect-square object-cover bg-white"
+        class="aspect-square object-cover bg-white opacity-40 md:opacity-100 transition-opacity duration-300"
       />
     </UMarquee>
     <UMarquee
@@ -53,7 +53,7 @@
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
         loading="lazy"
-        class="aspect-square object-cover  bg-white"
+        class="aspect-square object-cover bg-white opacity-40 md:opacity-100 transition-opacity duration-300"
       />
     </UMarquee>
     <UMarquee
@@ -71,7 +71,7 @@
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
         loading="lazy"
-        class="aspect-square object-cover  bg-white"
+        class="aspect-square object-cover bg-white opacity-40 md:opacity-100 transition-opacity duration-300"
       />
     </UMarquee>
   </div>

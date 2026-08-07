@@ -8,7 +8,7 @@
 
     <!-- Gradient Overlay (above marquee, below text) -->
     <!-- Solid background on the left for text readability, fading completely to transparent on the right -->
-    <div class="absolute inset-0 bg-linear-to-r from-[#170a3c] via-[#170a3c] via-20% to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-linear-to-r from-[#170a3c] via-[#170a3c] via-0% md:via-20% to-transparent z-10 pointer-events-none"></div>
     <div class="absolute inset-0 bg-linear-to-t from-[#170a3c] via-transparent to-transparent z-10 pointer-events-none"></div>
 
     <!-- Purple Glow -->
