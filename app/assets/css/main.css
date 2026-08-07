@@ -13,6 +13,8 @@
   --color-primary-800: var(--color-blue-800);
   --color-primary-900: var(--color-blue-900);
   --color-primary-950: var(--color-blue-950);
+
+  --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
 }
 
 body {

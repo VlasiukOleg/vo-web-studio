@@ -9,7 +9,6 @@
       <PortfolioSection />
       <ProcessSection />
       <ContactSection />
-      <TestMarquee />
       <AppFooter />
     </div>
   </UApp>
