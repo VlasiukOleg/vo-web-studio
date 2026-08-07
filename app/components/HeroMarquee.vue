@@ -15,8 +15,9 @@
         width="260"
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
-        loading="lazy"
-        class="aspect-square object-cover bg-white opacity-40 md:opacity-100 transition-opacity duration-300"
+        loading="eager"
+        fetchpriority="high"
+        class="aspect-square object-cover bg-white/5 opacity-40 md:opacity-100 transition-opacity duration-300"
       />
     </UMarquee>
     <UMarquee
@@ -33,8 +34,9 @@
         width="260"
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
-        loading="lazy"
-        class="aspect-square object-cover bg-white opacity-40 md:opacity-100 transition-opacity duration-300"
+        loading="eager"
+        fetchpriority="high"
+        class="aspect-square object-cover bg-white/5 opacity-40 md:opacity-100 transition-opacity duration-300"
       />
     </UMarquee>
     <UMarquee
@@ -52,8 +54,8 @@
         width="260"
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
-        loading="lazy"
-        class="aspect-square object-cover bg-white opacity-40 md:opacity-100 transition-opacity duration-300"
+        loading="eager"
+        class="aspect-square object-cover bg-white/5 opacity-40 md:opacity-100 transition-opacity duration-300"
       />
     </UMarquee>
     <UMarquee
@@ -70,8 +72,8 @@
         width="260"
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
-        loading="lazy"
-        class="aspect-square object-cover bg-white opacity-40 md:opacity-100 transition-opacity duration-300"
+        loading="eager"
+        class="aspect-square object-cover bg-white/5 opacity-40 md:opacity-100 transition-opacity duration-300"
       />
     </UMarquee>
   </div>
