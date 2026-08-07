@@ -3,7 +3,7 @@
     <UContainer>
       <div class="text-center mb-12">
         <div class="text-sm font-bold tracking-widest uppercase text-white mb-4">Експертиза</div>
-        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Наші послугирр</h2>
+        <h2 class="font-noto text-4xl md:text-5xl font-black text-white mb-6">Наші послугирр</h2>
         <p class="text-white/80 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
           Комплексні рішення для розвитку вашого бізнесу в інтернеті, від прототипу до успішного релізу.
         </p>
@@ -42,7 +42,7 @@
           <div class="bg-[#0e163b] p-10 md:p-16 flex flex-col justify-center text-white min-h-[400px]">
             <transition name="fade" mode="out-in">
               <div :key="activeTab">
-                <h3 class="text-3xl font-bold mb-6 leading-tight">{{ services[activeTab].heading }}</h3>
+                <h3 class="font-noto text-3xl font-bold mb-6 leading-tight">{{ services[activeTab].heading }}</h3>
                 <div class="space-y-6 text-gray-300 leading-relaxed font-light text-base md:text-lg">
                   <p>{{ services[activeTab].description1 }}</p>
                   <p>{{ services[activeTab].description2 }}</p>

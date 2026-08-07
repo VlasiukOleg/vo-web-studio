@@ -2,7 +2,7 @@
   <section id="process" class="py-24 md:py-32 bg-[#00042a] relative">
     <UContainer>
       <div class="text-center max-w-3xl mx-auto mb-20">
-        <h2 class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">Етапи розробки</h2>
+        <h2 class="font-noto text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">Етапи розробки</h2>
         <p class="text-slate-400 text-lg leading-relaxed font-light">Прозорий, структурований процес, орієнтований на результат. Від ідеї до успішного запуску.</p>
       </div>
 
@@ -36,7 +36,7 @@
             <!-- Content Column -->
             <div class="pt-4 md:pt-6 flex-1 max-w-xl">
               <h3 
-                class="text-2xl md:text-3xl font-bold mb-4 transition-colors duration-700"
+                class="font-noto text-2xl md:text-3xl font-bold mb-4 transition-colors duration-700"
                 :class="activeStep >= index ? 'text-[#00d2ff]' : 'text-white'"
               >
                 {{ step.title }}

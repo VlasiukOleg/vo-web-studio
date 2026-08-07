@@ -15,6 +15,7 @@
   --color-primary-950: var(--color-blue-950);
 
   --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  --font-noto: "Noto Sans", sans-serif;
 }
 
 body {

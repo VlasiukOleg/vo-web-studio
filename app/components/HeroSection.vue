@@ -23,7 +23,7 @@
         </div>
         
         <!-- Glowing Header (Smaller) -->
-        <h1 class="text-4xl md:text-4xl lg:text-6xl font-black leading-[1.1] mb-6 uppercase tracking-tight text-white" style="text-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 80px rgba(168, 85, 247, 0.4);">
+        <h1 class="font-noto text-4xl md:text-4xl lg:text-6xl font-black leading-[1.1] mb-6 uppercase tracking-tight text-white" style="text-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 80px rgba(168, 85, 247, 0.4);">
           Створюємо <span class="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-400" style="text-shadow: none;">веб-рішення</span>,<br />
           які генерують<br />
           прибуток.

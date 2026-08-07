@@ -11,7 +11,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="order-2 lg:order-1">
             <div class="text-sm font-bold tracking-widest uppercase text-gray-500 mb-4">Логістика / Корпоративний сайт</div>
-            <h3 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">Global Logistics</h3>
+            <h3 class="font-noto text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">Global Logistics</h3>
             <p class="text-gray-400 text-lg font-light leading-relaxed mb-8">
               Повна трансформація цифрової присутності для міжнародної логістичної компанії. Кастомний калькулятор вартості, інтеграція з внутрішньою CRM та неймовірна швидкість завдяки Nuxt SSR.
             </p>
@@ -60,7 +60,7 @@
           </div>
           <div>
             <div class="text-sm font-bold tracking-widest uppercase text-gray-500 mb-4">Спорт / Web App</div>
-            <h3 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">FitLife App</h3>
+            <h3 class="font-noto text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">FitLife App</h3>
             <p class="text-gray-400 text-lg font-light leading-relaxed mb-8">
               Прогресивний веб-додаток (PWA) для мережі фітнес-центрів. Зручний запис на тренування, особистий кабінет клієнта, інтеграція платіжних систем та гейміфікація досягнень.
             </p>

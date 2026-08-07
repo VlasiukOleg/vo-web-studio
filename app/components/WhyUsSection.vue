@@ -6,7 +6,7 @@
         <div class="text-[#00a8ff] font-bold tracking-widest uppercase text-sm mb-4">
           Переваги технології
         </div>
-        <h2 class="text-4xl md:text-5xl lg:text-[3.5rem] font-black text-[#15234b] mb-8 leading-[1.1] tracking-tight">
+        <h2 class="font-noto text-4xl md:text-5xl lg:text-[3.5rem] font-black text-[#15234b] mb-8 leading-[1.1] tracking-tight">
           Чому кастомний<br/> Nuxt SSR?
         </h2>
         
@@ -38,7 +38,7 @@
         </div>
         
         <div class="relative z-10 p-10 md:p-12 lg:p-16 xl:p-20 max-w-xl">
-          <h3 class="text-3xl font-bold text-[#15234b] mb-4">Блискавичне завантаження</h3>
+          <h3 class="font-noto text-3xl font-bold text-[#15234b] mb-4">Блискавичне завантаження</h3>
           <p class="text-[#5a6b8c] text-base lg:text-lg mb-8 leading-relaxed font-medium max-w-md">
             SSR-рендеринг забезпечує завантаження за долі секунди. Ви не втрачаєте клієнтів через повільний сайт.
           </p>
@@ -55,7 +55,7 @@
         </div>
         
         <div class="relative z-10 p-10 md:p-12 lg:p-16 xl:p-20 max-w-xl">
-          <h3 class="text-3xl font-bold text-[#15234b] mb-4">Бездоганне SEO</h3>
+          <h3 class="font-noto text-3xl font-bold text-[#15234b] mb-4">Бездоганне SEO</h3>
           <p class="text-[#5a6b8c] text-base lg:text-lg mb-8 leading-relaxed font-medium max-w-md">
             Пошуковики люблять чистий та швидкий код кастомних сайтів. Ваш бізнес буде вище в рейтингах Google.
           </p>
@@ -72,7 +72,7 @@
         </div>
         
         <div class="relative z-10 p-10 md:p-12 lg:p-16 xl:p-20 max-w-xl">
-          <h3 class="text-3xl font-bold text-[#15234b] mb-4">Безмежне масштабування</h3>
+          <h3 class="font-noto text-3xl font-bold text-[#15234b] mb-4">Безмежне масштабування</h3>
           <p class="text-[#5a6b8c] text-base lg:text-lg mb-8 leading-relaxed font-medium max-w-md">
             Жодних обмежень шаблонів. Ми створюємо архітектуру, яка легко адаптується під зростання вашого бізнесу.
           </p>

@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Nunito: [400, 700, 900], // 900 — для тих самих жирних заголовків
+      'Noto Sans': [400, 700, 900]
     },
     display: 'swap',
     download: true // Завантажує шрифт локально при збірці (краще для швидкості)
