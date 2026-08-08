@@ -35,14 +35,14 @@
             <div class="absolute inset-0 bg-cyan-400 rounded-full blur-[10px] opacity-40 animate-pulse"></div>
             <img 
               v-show="!showVideo"
-              src="/video/hello-hero-static.png" 
+              src="/video/hello-hero-static.webp" 
               class="relative w-20 h-20 md:w-28 md:h-28 rounded-full object-cover object-[95%_center] border-2 border-cyan-400/80 shadow-lg z-10" 
               alt="Олег Власюк"
             />
             <video 
               v-show="showVideo"
               ref="heroVideo"
-              src="/video/hello-hero.mp4" 
+              src="/video/hello-hero1.mp4" 
               class="relative w-20 h-20 md:w-28 md:h-28 rounded-full object-cover object-[95%_center] border-2 border-cyan-400/80 shadow-lg z-10" 
               loop 
               muted 

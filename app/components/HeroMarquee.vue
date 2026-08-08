@@ -30,7 +30,7 @@
       <img
         v-for="i in [5, 6, 7, 8]"
         :key="i"
-        :src="`/blocks/image${i}.png`"
+        :src="`/blocks/image${i}.webp`"
         width="260"
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
@@ -50,7 +50,7 @@
       <img
         v-for="i in [9, 10, 11, 12]"
         :key="i"
-        :src="`/blocks/image${i}.png`"
+        :src="`/blocks/image${i}.webp`"
         width="260"
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
@@ -68,7 +68,7 @@
       <img
         v-for="i in [9, 10, 11, 12]"
         :key="i"
-        :src="`/blocks/image${i}.png`"
+        :src="`/blocks/image${i}.webp`"
         width="260"
         height="260"
         :alt="`Nuxt UI Screenshot ${i}`"
