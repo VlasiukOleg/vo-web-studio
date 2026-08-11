@@ -24,32 +24,27 @@
         
         <!-- Glowing Header (Smaller) -->
         <h1 class="font-noto text-4xl md:text-4xl lg:text-6xl font-black leading-[1.1] mb-6 uppercase tracking-tight text-white" style="text-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 80px rgba(168, 85, 247, 0.4);">
-          Створюємо <span class="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-400" style="text-shadow: none;">веб-рішення</span>,<br />
-          які генерують<br />
-          прибуток.
+          Створюємо <br/><span class="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-400" style="text-shadow: none;">веб-рішення</span>,<br />
+          які працюють <br/>на бізнес.
         </h1>
         
-        <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-10 max-w-xl">
-          <div class="shrink-0 relative">
-            <!-- Світіння навколо відео -->
-            <div class="absolute inset-0 bg-cyan-400 rounded-full blur-[10px] opacity-40 animate-pulse"></div>
-            <img 
-              v-show="!showVideo"
-              src="/video/hello-hero-static.webp" 
-              class="relative w-20 h-20 md:w-28 md:h-28 rounded-full object-cover object-[95%_center] border-2 border-cyan-400/80 shadow-lg z-10" 
-              alt="Олег Власюк"
-            />
-            <video 
-              v-show="showVideo"
-              ref="heroVideo"
-              src="/video/hello-hero1.mp4" 
-              class="relative w-20 h-20 md:w-28 md:h-28 rounded-full object-cover object-[95%_center] border-2 border-cyan-400/80 shadow-lg z-10" 
-              loop 
-              muted 
-              playsinline
-            ></video>
+        <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-8 mb-10 max-w-xl">
+          <div class="shrink-0 flex flex-col items-center">
+            <div class="relative mb-3">
+              <!-- Світіння навколо фото -->
+              <div class="absolute inset-0 bg-cyan-400 rounded-full blur-[10px] opacity-40 animate-pulse"></div>
+              <img 
+                src="/video/vo-photo.jpg" 
+                class="relative w-22 h-22 rounded-full object-cover border-2 border-cyan-400/80 shadow-lg z-10" 
+                alt="Власюк Олег"
+              />
+            </div>
+            <div class="text-center">
+              <div class="font-bold text-white text-sm">Власюк Олег</div>
+              <div class="text-cyan-400 text-[10px] mt-0.5 tracking-wider uppercase">Founder & CEO</div>
+            </div>
           </div>
-          <p class="text-base md:text-lg text-gray-300 leading-relaxed font-light min-h-[90px] pt-1">
+          <p class="text-base md:text-lg text-gray-300 leading-relaxed font-light flex-1 pt-1 md:pt-4">
             {{ typedText }}<span class="animate-pulse text-cyan-400">|</span>
           </p>
         </div>
@@ -71,36 +66,21 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const fullText = 'Привіт, я Олег Власюк. Перетворюю складні бізнес-ідеї на потужні кастомні веб-продукти з бездоганним дизайном та блискавичною швидкістю.'
+const fullText = 'Вітаю! Ми розробляємо швидкі та ефективні лендінги, зручні інтернет-магазини, сучасні SPA та AI-рішення, які допомагають бізнесу виділятися серед конкурентів і впевнено зростати.'
 const typedText = ref('')
-const heroVideo = ref(null)
-const showVideo = ref(false)
 
 onMounted(() => {
   let i = 0
   const typeWriter = () => {
-    if (i === 0) {
-      showVideo.value = true
-      if (heroVideo.value) {
-        heroVideo.value.play()
-      }
-    }
-    
     if (i < fullText.length) {
       typedText.value += fullText.charAt(i)
       i++
       // Збільшена затримка на ~20% для ефекту реального друку
       setTimeout(typeWriter, Math.random() * 35 + 20)
-    } else {
-      // Коли текст надруковано, ховаємо відео, показуємо статику
-      showVideo.value = false
-      if (heroVideo.value) {
-        heroVideo.value.pause()
-      }
     }
   }
   
   // Починаємо друк через невелику затримку після завантаження сторінки
-  setTimeout(typeWriter, 500)
+  setTimeout(typeWriter, 1000)
 })
 </script>
