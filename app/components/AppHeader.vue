@@ -1,33 +1,17 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { useWindowScroll } from '@vueuse/core'
 
-const scrollProgress = ref(0)
+const { y } = useWindowScroll();
 
-const updateProgress = () => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0
-  const docHeight = Math.max(
-    document.body.scrollHeight, document.documentElement.scrollHeight,
-    document.body.offsetHeight, document.documentElement.offsetHeight,
-    document.body.clientHeight, document.documentElement.clientHeight
-  )
-  const winHeight = window.innerHeight || document.documentElement.clientHeight
-  
-  const scrollableHeight = docHeight - winHeight
-  if (scrollableHeight > 0) {
-    const scrollPercent = scrollTop / scrollableHeight
-    scrollProgress.value = Math.round(Math.min(100, Math.max(0, scrollPercent * 100)))
-  } else {
-    scrollProgress.value = 0
-  }
-}
+const scrollProgress = computed(() => {
+  if (!import.meta.client) return 0
 
-onMounted(() => {
-  window.addEventListener('scroll', updateProgress, { passive: true })
-  updateProgress()
-})
+  const scrollableHeight =
+    document.documentElement.scrollHeight - window.innerHeight
 
-onUnmounted(() => {
-  window.removeEventListener('scroll', updateProgress)
+  if (scrollableHeight <= 0) return 0
+
+  return Math.min(100, (y.value / scrollableHeight) * 100)
 })
 </script>
 
@@ -57,5 +41,8 @@ onUnmounted(() => {
         base: 'bg-blue-950'
       }"/>
     </div>
+    <div>
+  </div>
   </header>
+   
 </template>
