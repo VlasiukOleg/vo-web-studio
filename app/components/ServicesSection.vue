@@ -1,9 +1,9 @@
 <template>
-  <section id="services" class="py-24 md:py-32 relative bg-gradient-to-r from-[#005c8a] via-[#1a367d] to-[#2c237a]">
+  <section id="services" class="py-18 relative bg-linear-to-r from-[#005c8a] via-[#1a367d] to-[#2c237a]">
     <UContainer>
       <div class="text-center mb-12">
         <div class="text-sm font-bold tracking-widest uppercase text-white mb-4">Експертиза</div>
-        <h2 class="font-noto text-4xl md:text-5xl font-black text-white mb-6">Наші послугирр</h2>
+        <h2 class="font-noto text-4xl md:text-5xl font-black text-white mb-6">Наші послуги</h2>
         <p class="text-white/80 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
           Комплексні рішення для розвитку вашого бізнесу в інтернеті, від прототипу до успішного релізу.
         </p>
@@ -16,7 +16,7 @@
           :key="index"
           @click="activeTab = index"
           :class="[
-            'flex flex-col items-center justify-center px-6 py-4 min-w-[120px] transition-all duration-300 rounded-sm',
+            'flex flex-col items-center justify-center px-6 py-4 min-w-30 transition-all duration-300 rounded-sm',
             activeTab === index 
               ? 'bg-white text-[#1a365d]' 
               : 'bg-transparent text-white hover:bg-white/10'
@@ -29,9 +29,9 @@
 
       <!-- Content Area -->
       <div class="max-w-6xl mx-auto shadow-2xl overflow-hidden rounded-sm transition-all duration-500">
-        <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="grid grid-cols-1 lg:grid-cols-6">
           <!-- Left: Image -->
-          <div class="relative aspect-video lg:aspect-auto">
+          <div class="relative aspect-video lg:aspect-auto lg:col-span-2">
             <!-- Smooth fade between images -->
             <transition name="fade" mode="out-in">
               <img :key="activeTab" :src="services[activeTab].image" :alt="services[activeTab].title" class="w-full h-full object-cover absolute inset-0" />
@@ -39,7 +39,7 @@
           </div>
           
           <!-- Right: Text Block -->
-          <div class="bg-[#0e163b] p-10 md:p-16 flex flex-col justify-center text-white min-h-[400px]">
+          <div class="bg-[#0e163b] p-10 flex flex-col justify-center text-white lg:col-span-4">
             <transition name="fade" mode="out-in">
               <div :key="activeTab">
                 <h3 class="font-noto text-3xl font-bold mb-6 leading-tight">{{ services[activeTab].heading }}</h3>
@@ -48,9 +48,9 @@
                   <p>{{ services[activeTab].description2 }}</p>
                 </div>
                 
-                <div class="mt-12">
-                  <UButton size="xl" variant="outline" color="gray" class="font-bold px-8 py-4 text-sm justify-center rounded-none text-white border-white/30 hover:bg-white hover:text-[#0e163b] uppercase tracking-wider transition-all">
-                    Дізнатися більше
+                <div class="mt-6 flex justify-end">
+                  <UButton to="/landing" size="xl" class="bg-cyan-500 text-[#050b14] hover:bg-cyan-400 font-black px-8 py-4 text-sm justify-center rounded-none uppercase tracking-wider transition-all border-none shadow-lg shadow-cyan-500/20">
+                    Ціна та інформація
                   </UButton>
                 </div>
               </div>
