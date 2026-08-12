@@ -49,7 +49,7 @@
                 </div>
                 
                 <div class="mt-6 flex justify-end">
-                  <UButton to="/landing" size="xl" class="bg-cyan-500 text-[#050b14] hover:bg-cyan-400 font-black px-8 py-4 text-sm justify-center rounded-none uppercase tracking-wider transition-all border-none shadow-lg shadow-cyan-500/20">
+                  <UButton :to="services[activeTab].link" size="xl" class="bg-cyan-500 text-[#050b14] hover:bg-cyan-400 font-black px-8 py-4 text-sm justify-center rounded-none uppercase tracking-wider transition-all border-none shadow-lg shadow-cyan-500/20">
                     Ціна та інформація
                   </UButton>
                 </div>
@@ -74,15 +74,17 @@ const services = [
     heading: 'Лендінги – Ефективне залучення клієнтів',
     description1: 'Ми створюємо сучасні односторінкові сайти з продуманим UX/UI дизайном, які ідеально підходять для рекламних кампаній та презентації одного продукту чи послуги.',
     description2: 'Кожен лендінг оптимізується під максимальну конверсію завдяки потужним закликам до дії, швидкій загрузці та бездоганній адаптації під мобільні пристрої.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
+    link: '/landing'
   },
   {
     title: 'E-Commerce',
     icon: 'i-heroicons-shopping-cart',
-    heading: 'E-Commerce – Масштабовані онлайн магазини',
-    description1: 'Ми розробляємо зручні інтернет-магазини, які забезпечують безперебійний процес покупок для ваших клієнтів та легке управління товарами для вас.',
-    description2: 'Інтеграція платіжних систем, CRM, складського обліку та оптимізація швидкості загрузки каталогу гарантують стабільне зростання ваших онлайн-продажів.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1950&auto=format&fit=crop'
+    heading: 'E-Commerce – Інтернет-магазин під ключ',
+    description1: 'Створюємо сучасні інтернет-магазини з зручним каталогом, кошиком та оформленням замовлень. Швидкий, адаптивний і продуманий магазин, яким легко керувати.',
+    description2: 'Продумана структура каталогу, адаптація під смартфони та інтеграція необхідних сервісів створюють комфортний шлях від першого перегляду до покупки.',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1950&auto=format&fit=crop',
+    link: '/ecommerce'
   },
   {
     title: 'Веб-додатки',
@@ -90,7 +92,8 @@ const services = [
     heading: 'Веб-додатки – Кастомні рішення для бізнесу',
     description1: 'Розробляємо складні кастомні CRM-системи, Single Page Applications (SPA), дашборди та портали, які автоматизують ваші унікальні бізнес-процеси.',
     description2: 'Використовуючи сучасний стек Nuxt та Vue, ми створюємо додатки, що працюють блискавично швидко, масштабуються та забезпечують найвищий рівень безпеки даних.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
+    link: '/web-apps'
   }
 ]
 </script>
