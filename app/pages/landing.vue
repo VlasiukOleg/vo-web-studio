@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#00042a] text-white min-h-screen">
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-18 md:pt-40 overflow-hidden bg-[#170a3c]">
+    <section class="relative pt-18 pb-18 md:pt-24 overflow-hidden bg-[#170a3c]">
       <!-- Background effects -->
       <div class="absolute inset-0 z-0">
         <div class="absolute top-1/4 left-1/4 w-125 h-125 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none"></div>
@@ -9,6 +9,14 @@
       </div>
       
       <UContainer class="relative z-10">
+        <div class="mb-10">
+          <UBreadcrumb 
+            :items="[
+              { label: 'Головна', to: '/', class: 'text-gray-400 hover:text-white transition-colors' }, 
+              { label: 'Landing Page', class: 'text-cyan-400 font-bold' }
+            ]" 
+          />
+        </div>
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="font-noto text-5xl md:text-6xl font-black leading-[1.1] mb-8 uppercase tracking-tight text-white">
             Розробка Landing Page<br/>
@@ -100,18 +108,23 @@
     </section>
 
     <!-- CTA Form Section -->
-    <section class="py-18 bg-[#0a1120] relative border-t border-white/10">
+    <section ref="contactSectionRef" class="py-18 bg-gray-50 relative">
       <UContainer>
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-4xl mx-auto">
           <div class="text-center mb-12">
-            <h2 class="font-noto text-4xl font-black text-white mb-6 uppercase tracking-tight">Готові запустити ефективний лендінг для вашого бізнесу?</h2>
-            <p class="text-xl text-gray-400 font-light">
+            <h2 class="font-noto text-3xl md:text-4xl font-black text-[#050b14] mb-6 uppercase tracking-tight">Готові запустити ефективний лендінг для вашого бізнесу?</h2>
+            <p class="text-xl text-gray-600 font-medium">
               Залиште заявку, і я зв'яжуся з вами для безкоштовної консультації та обговорення вашого проекту.
             </p>
           </div>
           
-          <div class="bg-white/5 border border-white/10 p-8 md:p-12">
-            <ContactForm />
+          <div class="max-w-2xl mx-auto bg-linear-to-br from-[#050b14] to-[#0a1120] border border-[#1a2642] p-10 md:p-12 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+            
+            <div class="relative z-10">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </UContainer>
@@ -120,6 +133,24 @@
 </template>
 
 <script setup>
+import { ref, onUnmounted, watch } from 'vue'
+import { useWindowScroll } from '@vueuse/core'
+
+const headerTheme = useState('headerTheme')
+const contactSectionRef = ref(null)
+const { y } = useWindowScroll()
+
+watch(y, () => {
+  if (contactSectionRef.value) {
+    const rect = contactSectionRef.value.getBoundingClientRect()
+    headerTheme.value = rect.top <= 85 ? 'light' : 'dark'
+  }
+})
+
+onUnmounted(() => {
+  headerTheme.value = 'dark'
+})
+
 const features = [
   {
     emoji: '🎨',

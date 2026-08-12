@@ -13,15 +13,22 @@ const scrollProgress = computed(() => {
 
   return Math.min(100, (y.value / scrollableHeight) * 100)
 })
+
+const headerTheme = useState('headerTheme', () => 'dark')
 </script>
 
 <template>
-  <header class="py-4 border-b border-white/5 fixed top-0 left-0 w-full bg-transparent backdrop-blur-xl z-50">
+  <header 
+    :class="[
+      'py-4 fixed top-0 left-0 w-full z-50 backdrop-blur-xl transition-all duration-300',
+      headerTheme === 'light' ? 'bg-[#00042a]/95 border-b border-white/10 shadow-lg' : 'bg-transparent border-b border-white/5'
+    ]"
+  >
     <UContainer class="flex justify-between items-center relative">
-      <div class="text-2xl font-black tracking-tighter text-white flex items-center gap-2 cursor-pointer">
+      <NuxtLink to="/" class="text-2xl font-black tracking-tighter text-white flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
         <span class="w-8 h-8 bg-cyan-500 rounded-sm flex items-center justify-center text-[#050b14] text-sm">VO</span>
         WebStudio
-      </div>
+      </NuxtLink>
       <div class="hidden md:flex gap-8 text-sm font-bold tracking-widest uppercase text-gray-400">
         <a href="#services" class="hover:text-cyan-400 transition-colors">Експертиза</a>
         <a href="#portfolio" class="hover:text-cyan-400 transition-colors">Роботи</a>
