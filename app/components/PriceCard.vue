@@ -73,6 +73,9 @@ const colors = {
 const themeColors = computed(() => colors[props.color])
 
 const priceSizeClass = computed(() => {
+  if (props.price.length > 20) {
+    return 'text-2xl md:text-3xl'
+  }
   return props.isCustom ? 'text-4xl md:text-4xl' : 'text-5xl md:text-5xl'
 })
 
