@@ -1,12 +1,13 @@
 <template>
-  <section class="relative w-full bg-white border-y border-gray-200 lg:bg-[linear-gradient(to_right,#def3ff_50%,white_50%)]">
+  <section id="why-us" class="relative w-full bg-white border-y border-gray-200 lg:bg-[linear-gradient(to_right,#def3ff_50%,white_50%)]">
     <div class="flex flex-col lg:flex-row w-full relative items-start">
       
       <!-- Left Column (Sticky on Desktop) -->
       <div class="w-full lg:w-1/2 bg-[#def3ff] lg:bg-transparent border-r border-blue-200 lg:sticky lg:top-15 h-fit flex flex-col p-10 md:p-16 lg:p-18 overflow-hidden z-10">
         <div class="max-w-xl mx-auto lg:mx-0 lg:ml-auto w-full lg:pr-10 relative">
-          <div class="text-[#00a8ff] font-bold tracking-widest uppercase text-sm mb-4">
-            Переваги технології
+          <div class="inline-flex items-center gap-3 mb-4">
+            <div class="w-12 h-0.5 bg-[#00a8ff]"></div>
+            <span class="text-[#00a8ff] font-bold tracking-widest uppercase text-sm">Переваги технології</span>
           </div>
           <h2 class="font-noto text-4xl md:text-5xl lg:text-[3.5rem] font-black text-[#15234b] mb-8 leading-[1.1] tracking-tight">
             Чому варто обрати кастомну розробку?

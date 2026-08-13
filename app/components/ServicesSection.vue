@@ -2,7 +2,10 @@
   <section id="services" class="py-18 relative bg-linear-to-r from-[#005c8a] via-[#1a367d] to-[#2c237a]">
     <UContainer>
       <div class="text-center mb-12">
-        <div class="text-sm font-bold tracking-widest uppercase text-white mb-4">Експертиза</div>
+        <div class="inline-flex items-center gap-3 mb-4">
+          <div class="w-12 h-0.5 bg-cyan-400"></div>
+          <span class="text-sm font-bold tracking-widest uppercase text-cyan-400">Експертиза</span>
+        </div>
         <h2 class="font-noto text-4xl md:text-5xl font-black text-white mb-6">Наші послуги</h2>
         <p class="text-white/80 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
           Комплексні рішення для розвитку вашого бізнесу в інтернеті, від прототипу до успішного релізу.

@@ -1,5 +1,5 @@
 <template>
-  <section class="py-18 relative bg-white">
+  <section id="contact" class="py-18 relative bg-white">
     <UContainer>
       <div class="bg-[#0a1120] border border-white/10 p-10 md:p-20 relative overflow-hidden rounded-2xl shadow-2xl">
         <!-- Glitch / Glow effects -->
