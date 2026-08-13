@@ -1,5 +1,5 @@
 <template>
-  <section id="process" class="py-24 md:py-32 bg-[#00042a] relative">
+  <section id="process" class="py-18 bg-[#00042a] relative">
     <UContainer>
       <div class="text-center max-w-3xl mx-auto mb-20">
         <h2 class="font-noto text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">Етапи розробки</h2>
@@ -8,7 +8,7 @@
 
       <div class="max-w-4xl mx-auto relative px-4 md:px-0">
         <!-- Background dark vertical line -->
-        <div class="absolute left-[64px] md:left-[124px] top-6 bottom-6 w-[2px] bg-[#1a365d]/50"></div>
+        <div class="absolute left-[70px] md:left-[164px] top-6 bottom-6 w-[2px] bg-[#1a365d]/50"></div>
         
         <div class="flex flex-col gap-12 md:gap-20">
           <div 
@@ -18,7 +18,7 @@
             class="relative flex gap-8 md:gap-16 items-start"
           >
             <!-- Glowing Number -->
-            <div class="w-[80px] md:w-[120px] flex justify-end shrink-0 relative z-20 py-2">
+            <div class="w-[50px] md:w-[130px] flex justify-end shrink-0 relative z-20 py-2">
               <span 
                 class="text-6xl md:text-[7rem] font-black font-sans leading-none transition-all duration-700"
                 :class="activeStep >= index ? 'text-[#00d2ff] drop-shadow-[0_0_25px_rgba(0,210,255,0.6)]' : 'text-[#1a365d] drop-shadow-none'"
@@ -29,12 +29,12 @@
             
             <!-- Glowing Dot on the line -->
             <div 
-              class="absolute left-[61px] md:left-[121px] top-[30px] md:top-[45px] w-2 h-2 rounded-full transition-all duration-700 z-20"
+              class="absolute left-[67px] md:left-[161px] top-[26px] md:top-[45px] w-2 h-2 rounded-full transition-all duration-700 z-20"
               :class="activeStep >= index ? 'bg-[#00d2ff] shadow-[0_0_10px_#00d2ff]' : 'bg-[#1a365d]'"
             ></div>
 
             <!-- Content Column -->
-            <div class="pt-4 md:pt-6 flex-1 max-w-xl">
+            <div class="pt-2 md:pt-6 flex-1 max-w-xl">
               <h3 
                 class="font-noto text-2xl md:text-3xl font-bold mb-4 transition-colors duration-700"
                 :class="activeStep >= index ? 'text-[#00d2ff]' : 'text-white'"
@@ -57,20 +57,24 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const steps = [
   {
-    title: 'Стратегія',
-    description: 'Глибинне інтерв\'ю, аналіз конкурентів, формування технічного завдання та архітектури проекту. Ми створюємо план, який дає вашому бренду простір для зростання.'
+    title: 'Знайомство та планування',
+    description: 'Обговорюємо ваш бізнес, цілі та завдання майбутнього сайту. Визначаємо структуру, необхідний функціонал, інтеграції та формуємо зрозумілий план роботи.'
   },
   {
     title: 'UI/UX Дизайн',
-    description: 'Вашому новому сайту потрібен міцний фундамент. Створення прототипів та унікального візуального стилю, який відображає преміальність вашого бренду.'
+    description: 'Створюємо структуру та візуальний стиль майбутнього сайту. Продумуємо навігацію, розташування елементів і сценарії взаємодії, щоб сайт був зручним для ваших клієнтів.'
   },
   {
     title: 'Розробка',
-    description: 'Написання чистого, масштабованого коду з використанням Nuxt/Vue, оптимізація швидкості та SEO для максимальної конверсії.'
+    description: 'Перетворюємо затверджений дизайн на повноцінний веб-продукт. Реалізуємо необхідний функціонал, адаптивність, інтеграції та оптимізуємо швидкість роботи.'
+  },
+  {
+    title: 'Тестування',
+    description: 'Перевіряємо сайт на різних пристроях і екранах, тестуємо функціонал, форми, інтеграції та основні сценарії користувача. Виправляємо помилки перед запуском.'
   },
   {
     title: 'Запуск',
-    description: 'Фінальне тестування, деплой на сервери, налаштування аналітики та передача продукту клієнту.'
+    description: 'Публікуємо готовий сайт на сервері, підключаємо домен та необхідні сервіси. Налаштовуємо аналітику та перевіряємо роботу сайту після запуску.'
   }
 ]
 

@@ -67,7 +67,7 @@
 
 <script setup>
 const baseProject = {
-  title: 'LUM',
+  title: '',
   logo: '/works/lum-logo.png',
   category: 'E-commerce / Інтернет-магазин',
   description: 'Сучасний інтернет-магазин будівельних матеріалів (Local United Materials) з можливістю покупки прямо зі складу. Зручний каталог за видами робіт, актуальні ціни та швидке замовлення доставки.',
