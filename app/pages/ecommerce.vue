@@ -50,7 +50,7 @@
                 </div>
                 
                 <!-- CTA Button Start -->
-                <UButton size="lg" color="gray" class="bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-black px-8 py-4 text-base justify-center rounded-none uppercase tracking-wider group transition-all border-none shadow-lg shadow-purple-500/20 w-full sm:w-auto mx-auto flex">
+                <UButton to="#contact" size="lg" color="gray" class="bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-black px-8 py-4 text-base justify-center rounded-none uppercase tracking-wider group transition-all border-none shadow-lg shadow-purple-500/20 w-full sm:w-auto mx-auto flex">
                   Замовити Start
                   <UIcon name="i-heroicons-arrow-right" class="w-5 h-5 ml-2 transition-transform" />
                 </UButton>
@@ -79,7 +79,7 @@
                 </div>
                 
                 <!-- CTA Button Pro -->
-                <UButton size="lg" color="gray" class="bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-black px-8 py-4 text-base justify-center rounded-none uppercase tracking-wider group transition-all border-none shadow-lg shadow-purple-500/20 w-full sm:w-auto mx-auto flex">
+                <UButton to="#contact" size="lg" color="gray" class="bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-black px-8 py-4 text-base justify-center rounded-none uppercase tracking-wider group transition-all border-none shadow-lg shadow-purple-500/20 w-full sm:w-auto mx-auto flex">
                   Отримати консультацію
                   <UIcon name="i-heroicons-arrow-right" class="w-5 h-5 ml-2 transition-transform" />
                 </UButton>

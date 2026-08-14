@@ -8,7 +8,7 @@
       
       <UCarousel 
         v-slot="{ item }" 
-        :items="projects" 
+        :items="baseProject" 
         arrows 
         dots
         :prev="{ class: 'bg-cyan-500 hover:bg-cyan-400 cursor-pointer text-[#050b14] rounded-full shadow-lg w-10 h-10 flex items-center justify-center -left-12 transition-all' }"
@@ -28,9 +28,31 @@
               <span class="w-1.5 h-1.5 rounded-full bg-cyan-300 shadow-[0_0_8px_rgba(6,182,212,0.8)] animate-pulse"></span>
               {{ item.category }}
             </div>
-            <div class="flex items-center gap-2">
-              <img v-if="item.logo" :src="item.logo" :alt="item.title" class="h-14 md:h-16 object-contain mb-6" />
-              <h3 v-if="item.title" class="font-noto text-4xl md:text-5xl font-black text-gray-600 uppercase tracking-tight mb-6">{{ item.title }}</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <!-- Якщо це LUM (або немає звичайного logo/title), рендеримо кастомний логотип -->
+              <div v-if="item.logo === '/works/lum-logo.png'" class="flex flex-col">
+                <div class="flex items-start gap-1">
+                  <img 
+                    src="/works/lumlogo.svg" 
+                    width="22" 
+                    height="22" 
+                    class="w-9 h-9 md:w-11 md:h-11" 
+                    alt="LUM Logo" 
+                  />
+                  <div class="text-[28px]/6 font-bold md:text-[34px] text-gray-400 mt-1 -ml-2 md:mt-1.5">
+                    LUM
+                  </div>
+                </div>
+                <div class="text-[8px] md:text-[10px] -mt-2.5 ml-5.5 text-gray-400">
+                  local united materials
+                </div>
+              </div>
+              
+              <!-- Для інших проектів -->
+              <template v-else>
+                <img v-if="item.logo" :src="item.logo" :alt="item.title" class="h-12 object-contain" />
+                <h3 v-if="item.title" class="font-noto text-4xl md:text-5xl font-black text-white uppercase tracking-tight">{{ item.title }}</h3>
+              </template>
             </div>
             
             <p class="text-white/80 text-lg font-light leading-relaxed mb-8">
@@ -66,22 +88,38 @@
 </template>
 
 <script setup>
-const baseProject = {
+const baseProject = [{
   title: '',
   logo: '/works/lum-logo.png',
   category: 'E-commerce / Інтернет-магазин',
   description: 'Сучасний інтернет-магазин будівельних матеріалів (Local United Materials) з можливістю покупки прямо зі складу. Зручний каталог за видами робіт, актуальні ціни та швидке замовлення доставки.',
   image: '/works/lum.webp',
   link: 'https://www.lum.net.ua/'
-}
-
-// Create an array with 4 identical projects
-const projects = [
-  { ...baseProject },
-  { ...baseProject, title: 'L.U.M. (Demo 2)' },
-  { ...baseProject, title: 'L.U.M. (Demo 3)' },
-  { ...baseProject, title: 'L.U.M. (Demo 4)' }
-]
+},
+{
+  title: '',
+  logo: '/works/horeca-da-logo.webp',
+  category: 'Landing Page / Лендінг',
+  description: 'Сучасний лендінг для компанії HoReCa Da, що надає професійні бухгалтерські та консалтингові послуги для ресторанного бізнесу. Розроблено стильний дизайн, зручну структуру для презентації послуг та оптимізовано форму зворотного зв\'язку.',
+  image: '/works/horeca-da.webp',
+  link: 'https://www.horeca-da.com.ua/'
+},
+{
+  title: '',
+  logo: '/works/horeca-da-logo.webp',
+  category: 'Landing Page / Лендінг',
+  description: 'Сучасний лендінг для компанії HoReCa Da, що надає професійні бухгалтерські та консалтингові послуги для ресторанного бізнесу. Розроблено стильний дизайн, зручну структуру для презентації послуг та оптимізовано форму зворотного зв\'язку.',
+  image: '/works/horeca-da.webp',
+  link: 'https://www.horeca-da.com.ua/'
+},
+{
+  title: '',
+  logo: '/works/lum-logo.png',
+  category: 'E-commerce / Інтернет-магазин',
+  description: 'Сучасний інтернет-магазин будівельних матеріалів (Local United Materials) з можливістю покупки прямо зі складу. Зручний каталог за видами робіт, актуальні ціни та швидке замовлення доставки.',
+  image: '/works/lum.webp',
+  link: 'https://www.lum.net.ua/'
+}];
 </script>
 
 <style scoped>

@@ -18,6 +18,10 @@
   --font-noto: "Noto Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
 }

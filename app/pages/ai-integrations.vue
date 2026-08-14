@@ -44,7 +44,7 @@
           </div>
           
           <!-- CTA Button -->
-          <UButton size="lg" color="gray" class="bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-black px-8 py-4 text-base justify-center rounded-none uppercase tracking-wider group transition-all border-none shadow-lg shadow-purple-500/20 w-full sm:w-auto mx-auto flex">
+          <UButton to="#contact" size="lg" color="gray" class="bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-black px-8 py-4 text-base justify-center rounded-none uppercase tracking-wider group transition-all border-none shadow-lg shadow-purple-500/20 w-full sm:w-auto mx-auto flex">
             Обговорити AI-інтеграцію
             <UIcon name="i-heroicons-sparkles" class="w-5 h-5 ml-2 transition-transform" />
           </UButton>
@@ -59,25 +59,28 @@
           <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
           <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] pointer-events-none"></div>
           
-          <h2 class="relative z-10 font-noto text-3xl md:text-4xl font-black text-white mb-12 text-center uppercase tracking-tight">Розумна автоматизація, а не просто "чат"</h2>
+          <h2 class="relative z-10 font-noto text-3xl md:text-4xl font-black text-white mb-12 text-center uppercase tracking-tight">Чому варто впроваджувати <span class="text-cyan-400">ШІ</span> вже зараз?</h2>
           
           <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 text-left">
+            <!-- Part 1 -->
             <div class="space-y-4">
               <div class="w-12 h-1 bg-cyan-400 rounded-full mb-6"></div>
               <p class="text-gray-300 leading-relaxed text-lg">
-                Ми не пропонуємо банальне «додавання ChatGPT на ваш сайт». Ми <strong class="text-white">вбудовуємо AI у ваші бізнес-процеси</strong>. AI отримує структуровану інформацію, аналізує її та видає конкретний результат.
+                Світ швидко змінюється. Ті, хто використовують ШІ, вже сьогодні <strong class="text-white">працюють швидше і заробляють більше</strong>, залишаючи конкурентів далеко позаду.
               </p>
             </div>
             
+            <!-- Part 2 -->
             <div class="space-y-4 md:border-l md:border-white/10 md:pl-12">
               <div class="w-12 h-1 bg-purple-400 rounded-full mb-6"></div>
               <div class="text-gray-300 leading-relaxed text-lg space-y-4 font-medium">
-                <div class="flex items-center gap-3"><UIcon name="i-heroicons-check-circle" class="w-6 h-6 text-purple-400 shrink-0"/> <strong class="text-white">Аналіз ваших даних</strong></div>
-                <div class="flex items-center gap-3"><UIcon name="i-heroicons-check-circle" class="w-6 h-6 text-purple-400 shrink-0"/> Економія часу команди</div>
-                <div class="flex items-center gap-3"><UIcon name="i-heroicons-check-circle" class="w-6 h-6 text-purple-400 shrink-0"/> <strong class="text-white">WOW-ефект для клієнтів</strong></div>
+                <div class="flex items-center gap-3"><UIcon name="i-heroicons-bolt" class="w-6 h-6 text-purple-400 shrink-0"/> <strong class="text-white">Автоматизація рутини</strong></div>
+                <div class="flex items-center gap-3"><UIcon name="i-heroicons-bolt" class="w-6 h-6 text-purple-400 shrink-0"/> новий клієнтський досвід</div>
+                <div class="flex items-center gap-3"><UIcon name="i-heroicons-bolt" class="w-6 h-6 text-purple-400 shrink-0"/> <strong class="text-white">зменшення витрат на персонал</strong></div>
               </div>
             </div>
             
+            <!-- Part 3 -->
             <div class="space-y-4 md:border-l md:border-white/10 md:pl-12">
               <div class="w-12 h-1 bg-pink-400 rounded-full mb-6"></div>
               <p class="text-gray-300 leading-relaxed text-lg">
@@ -91,6 +94,7 @@
 
     <!-- CTA Form Section -->
     <ContactSection 
+      id="contact"
       title="Готові інтегрувати<br/><span class='text-cyan-400'>ШІ</span> у ваш бізнес?" 
       description="Розкажіть про свої задачі, і ми підкажемо, як за допомогою штучного інтелекту можна оптимізувати ваші процеси." 
     />
@@ -110,6 +114,7 @@ const appFeatures = [
   { emoji: '📸', label: 'Аналіз зображень', content: 'Користувач завантажує фото, а AI класифікує товар, визначає матеріал або оцінює стан. Особливо корисно для будівельної чи сервісної тематики.' },
   { emoji: '✨', label: 'Візуальні AI-примірочні', content: 'Генерація та редагування зображень. Наприклад, клієнт може завантажити своє фото, щоб віртуально «приміряти» зачіску, одяг чи аксесуар.' },
   { emoji: '✍️', label: 'AI-генератор контенту для каталогу', content: 'Інструмент для адміністраторів: достатньо вказати назву, і ШІ автоматично згенерує унікальний SEO-опис товару, характеристики та метатеги.' },
+  { emoji: '📲', label: 'Сповіщення (Telegram / Email)', content: 'Миттєве отримання заявок із контактних форм сайту безпосередньо у ваш Telegram-бот або на електронну пошту.' }
 ]
 
 const headerTheme = useState('headerTheme')
