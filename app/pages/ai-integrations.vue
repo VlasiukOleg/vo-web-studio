@@ -40,24 +40,7 @@
           <!-- Interactive Accordion (Features) -->
           <div class="mb-16 max-w-3xl mx-auto text-left relative z-10">
             <h2 class="font-noto text-3xl font-black text-white mb-8 text-center uppercase">Що ми можемо додати?</h2>
-            <UAccordion 
-              :items="appFeatures" 
-              size="xl"
-              :ui="{
-                wrapper: 'flex flex-col w-full space-y-4',
-                container: 'w-full',
-                body: 'text-base',
-                item: { base: 'bg-white/5 border border-t-0 border-white/10 rounded-b-xl p-6', padding: '' },
-                default: { class: 'w-full flex items-center justify-between p-6 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all focus:ring-0', variant: 'ghost', color: 'gray' }
-              }"
-            >
-              <template #default="{ item }">
-                <div class="flex items-center gap-4 text-left w-full">
-                  <span class="text-2xl">{{ item.emoji }}</span>
-                  <span class="text-xl font-bold text-white">{{ item.label }}</span>
-                </div>
-              </template>
-            </UAccordion>
+            <AppAccordion :items="appFeatures" />
           </div>
           
           <!-- CTA Button -->
@@ -126,7 +109,7 @@ const appFeatures = [
   { emoji: '🎙️', label: 'Голосові функції (Voice-to-Text)', content: 'Розпізнавання голосу для керування сайтом. Клієнти зможуть шукати товари, просто продиктувавши запит, що неймовірно зручно з мобільних пристроїв.' },
   { emoji: '📸', label: 'Аналіз зображень', content: 'Користувач завантажує фото, а AI класифікує товар, визначає матеріал або оцінює стан. Особливо корисно для будівельної чи сервісної тематики.' },
   { emoji: '✨', label: 'Візуальні AI-примірочні', content: 'Генерація та редагування зображень. Наприклад, клієнт може завантажити своє фото, щоб віртуально «приміряти» зачіску, одяг чи аксесуар.' },
-  { emoji: '✍️', label: 'AI-генератор контенту для каталогу', content: 'Інструмент для адміністраторів: достатньо вказати назву, і ШІ автоматично згенерує унікальний SEO-опис товару, характеристики та метатеги.' }
+  { emoji: '✍️', label: 'AI-генератор контенту для каталогу', content: 'Інструмент для адміністраторів: достатньо вказати назву, і ШІ автоматично згенерує унікальний SEO-опис товару, характеристики та метатеги.' },
 ]
 
 const headerTheme = useState('headerTheme')

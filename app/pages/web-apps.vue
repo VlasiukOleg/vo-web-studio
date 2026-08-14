@@ -40,24 +40,7 @@
           <!-- Interactive Accordion (Features) -->
           <div class="mb-16 max-w-3xl mx-auto text-left relative z-10">
             <h2 class="font-noto text-3xl font-black text-white mb-8 text-center">Що ми можемо розробити?</h2>
-            <UAccordion 
-              :items="appFeatures" 
-              size="xl"
-              :ui="{
-                wrapper: 'flex flex-col w-full space-y-4',
-                container: 'w-full',
-                body: 'text-base',
-                item: { base: 'bg-white/5 border border-t-0 border-white/10 rounded-b-xl p-6', padding: '' },
-                default: { class: 'w-full flex items-center justify-between p-6 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all focus:ring-0', variant: 'ghost', color: 'gray' }
-              }"
-            >
-              <template #default="{ item }">
-                <div class="flex items-center gap-4 text-left w-full">
-                  <span class="text-2xl">{{ item.emoji }}</span>
-                  <span class="text-xl font-bold text-white">{{ item.label }}</span>
-                </div>
-              </template>
-            </UAccordion>
+            <AppAccordion :items="appFeatures" />
           </div>
           
           <!-- CTA Button -->
@@ -125,7 +108,8 @@ const appFeatures = [
   { emoji: '👤', label: 'Особисті кабінети', content: 'Персональні кабінети користувачів із профілем, історією замовлень, документами, статусами та іншою необхідною інформацією.' },
   { emoji: '🔐', label: 'Внутрішні системи для бізнесу', content: 'Невеликі системи для обліку клієнтів, заявок, замовлень, товарів, документів та інших внутрішніх процесів.' },
   { emoji: '🔄', label: 'Автоматизація процесів', content: 'Автоматизація рутинних операцій, обробки заявок, розрахунків, повідомлень та інших повторюваних процесів.' },
-  { emoji: '🔗', label: 'Інтеграції з зовнішніми сервісами', content: 'Підключення API, платіжних систем, CRM, служб доставки, аналітики та інших сервісів.' }
+  { emoji: '🔗', label: 'Інтеграції з зовнішніми сервісами', content: 'Підключення API, платіжних систем, CRM, служб доставки, аналітики та інших сервісів.' },
+  { emoji: '📲', label: 'Сповіщення (Telegram / Email)', content: 'Миттєве отримання заявок із контактних форм сайту безпосередньо у ваш Telegram-бот або на електронну пошту.' }
 ]
 
 const headerTheme = useState('headerTheme')

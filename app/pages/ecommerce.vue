@@ -46,24 +46,7 @@
                 <!-- Interactive Accordion (Features Start) -->
                 <div class="mb-16 max-w-3xl mx-auto text-left relative z-10">
                   <h2 class="font-noto text-3xl font-black text-white mb-8 text-center">Що входить у тариф Start?</h2>
-                  <UAccordion 
-                    :items="startFeatures" 
-                    size="xl"
-                    :ui="{
-                      wrapper: 'flex flex-col w-full space-y-4',
-                      container: 'w-full',
-                      body: 'text-base',
-                      item: { base: 'bg-white/5 border border-t-0 border-white/10 rounded-b-xl p-6', padding: '' },
-                      default: { class: 'w-full flex items-center justify-between p-6 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all focus:ring-0', variant: 'ghost', color: 'gray' }
-                    }"
-                  >
-                    <template #default="{ item }">
-                      <div class="flex items-center gap-4 text-left w-full">
-                        <span class="text-2xl">{{ item.emoji }}</span>
-                        <span class="text-xl font-bold text-white">{{ item.label }}</span>
-                      </div>
-                    </template>
-                  </UAccordion>
+                  <AppAccordion :items="startFeatures" />
                 </div>
                 
                 <!-- CTA Button Start -->
@@ -86,47 +69,13 @@
                 <!-- Interactive Accordion (Features Pro Base) -->
                 <div class="mb-12 max-w-3xl mx-auto text-left relative z-10">
                   <h2 class="font-noto text-3xl font-black text-white mb-8 text-center">Що входить у тариф Pro?</h2>
-                  <UAccordion 
-                    :items="startFeatures" 
-                    size="xl"
-                    :ui="{
-                      wrapper: 'flex flex-col w-full space-y-4',
-                      container: 'w-full',
-                      body: 'text-base',
-                      item: { base: 'bg-white/5 border border-t-0 border-white/10 rounded-b-xl p-6', padding: '' },
-                      default: { class: 'w-full flex items-center justify-between p-6 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all focus:ring-0', variant: 'ghost', color: 'gray' }
-                    }"
-                  >
-                    <template #default="{ item }">
-                      <div class="flex items-center gap-4 text-left w-full">
-                        <span class="text-2xl">{{ item.emoji }}</span>
-                        <span class="text-xl font-bold text-white">{{ item.label }}</span>
-                      </div>
-                    </template>
-                  </UAccordion>
+                  <AppAccordion :items="startFeatures" />
                 </div>
 
                 <!-- Interactive Accordion (Features Pro Addons) -->
                 <div class="mb-16 max-w-3xl mx-auto text-left relative z-10">
                   <h2 class="font-noto text-3xl font-black text-purple-400 mb-8 text-center">Що ще можна додати?</h2>
-                  <UAccordion 
-                    :items="proFeatures" 
-                    size="xl"
-                    :ui="{
-                      wrapper: 'flex flex-col w-full space-y-4',
-                      container: 'w-full',
-                      body: 'text-base',
-                      item: { base: 'bg-white/5 border border-t-0 border-white/10 rounded-b-xl p-6', padding: '' },
-                      default: { class: 'w-full flex items-center justify-between p-6 bg-purple-500/10 border border-purple-500/20 rounded-xl hover:bg-purple-500/20 transition-all focus:ring-0', variant: 'ghost', color: 'gray' }
-                    }"
-                  >
-                    <template #default="{ item }">
-                      <div class="flex items-center gap-4 text-left w-full">
-                        <span class="text-2xl">{{ item.emoji }}</span>
-                        <span class="text-xl font-bold text-white">{{ item.label }}</span>
-                      </div>
-                    </template>
-                  </UAccordion>
+                  <AppAccordion :items="proFeatures" />
                 </div>
                 
                 <!-- CTA Button Pro -->
@@ -209,7 +158,8 @@ const startFeatures = [
   { emoji: '🛍️', label: 'Каталог товарів', content: 'До 100 товарів, категорії та підкатегорії, детальні картки товарів із варіантами (розмір, колір тощо), зручний пошук, базова фільтрація та функція "Обране".' },
   { emoji: '🛒', label: 'Кошик та замовлення', content: 'Зручне додавання товарів, інтерактивний міні-кошик, швидке оформлення замовлення на одній сторінці без зайвих кроків.' },
   { emoji: '📦', label: 'Інтеграція Нова Пошта', content: 'Автопідтягування міст, відділень та поштоматів для зручної доставки.' },
-  { emoji: '📊', label: 'Аналітика та реклама', content: 'Налаштування Google Analytics, GTM, Facebook/TikTok Pixel.' }
+  { emoji: '📊', label: 'Аналітика та реклама', content: 'Налаштування Google Analytics, GTM, Facebook/TikTok Pixel.' },
+  { emoji: '📲', label: 'Отримання заявок (Telegram / Email)', content: 'Миттєве отримання заявок із контактних форм сайту безпосередньо у ваш Telegram-бот або на електронну пошту.' }
 ]
 
 const proFeatures = [
