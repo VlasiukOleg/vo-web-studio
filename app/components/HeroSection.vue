@@ -45,16 +45,21 @@
             </div>
           </div>
           <p class="text-base md:text-lg text-gray-300 leading-relaxed font-light flex-1 pt-1 md:pt-4">
-            {{ typedText }}<span class="animate-pulse text-cyan-400">|</span>
+            Вітаю! Ми розробляємо швидкі та ефективні лендінги, зручні інтернет-магазини, сучасні SPA та AI-рішення, які допомагають бізнесу виділятися серед конкурентів і впевнено зростати.
           </p>
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4">
-          <UButton size="lg" color="gray" class="bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-black px-8 py-4 text-base justify-center rounded-none uppercase tracking-wider group transition-all border-none shadow-lg shadow-purple-500/20">
-            Отримати пропозицію
+          <UButton to="#contact" size="lg" class="bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-black px-8 py-4 text-base justify-center rounded-none uppercase tracking-wider group transition-all border-none shadow-lg shadow-purple-500/20">
+            Замовити проект
             <UIcon name="i-heroicons-arrow-right" class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
           </UButton>
-          <UButton size="lg" variant="outline" color="gray" class="font-bold px-8 py-4 text-base justify-center rounded-none text-white border-white/20 hover:bg-white hover:text-black uppercase tracking-wider transition-all">
+          <UButton 
+            to="#portfolio" 
+            size="lg" 
+            class="font-bold px-8 py-4 text-base justify-center rounded-none text-white hover:bg-white hover:text-black uppercase tracking-wider transition-all bg-transparent"
+            style="border: 2px solid; border-image: linear-gradient(to right, #a855f7, #3b82f6) 1;"
+          >
             Наші кейси
           </UButton>
         </div>
@@ -62,25 +67,3 @@
     </UContainer>
   </section>
 </template>
-
-<script setup>
-import { ref, onMounted } from 'vue'
-
-const fullText = 'Вітаю! Ми розробляємо швидкі та ефективні лендінги, зручні інтернет-магазини, сучасні SPA та AI-рішення, які допомагають бізнесу виділятися серед конкурентів і впевнено зростати.'
-const typedText = ref('')
-
-onMounted(() => {
-  let i = 0
-  const typeWriter = () => {
-    if (i < fullText.length) {
-      typedText.value += fullText.charAt(i)
-      i++
-      // Збільшена затримка на ~20% для ефекту реального друку
-      setTimeout(typeWriter, Math.random() * 35 + 20)
-    }
-  }
-  
-  // Починаємо друк через невелику затримку після завантаження сторінки
-  setTimeout(typeWriter, 1000)
-})
-</script>

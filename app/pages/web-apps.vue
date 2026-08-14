@@ -107,27 +107,10 @@
     </section>
 
     <!-- CTA Form Section -->
-    <section ref="contactSectionRef" class="py-18 bg-gray-50 relative">
-      <UContainer>
-        <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-12">
-            <h2 class="font-noto text-3xl md:text-4xl font-black text-[#050b14] mb-6 uppercase tracking-tight">Маєте ідею для веб-додатка?</h2>
-            <p class="text-xl text-gray-600 font-medium">
-              Залиште заявку, і я зв'яжуся з вами для безкоштовної консультації та прорахунку вашого проєкту.
-            </p>
-          </div>
-          
-          <div class="max-w-2xl mx-auto bg-linear-to-br from-[#050b14] to-[#0a1120] border border-[#1a2642] p-10 md:p-12 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px] pointer-events-none"></div>
-            
-            <div class="relative z-10">
-              <ContactForm />
-            </div>
-          </div>
-        </div>
-      </UContainer>
-    </section>
+    <ContactSection 
+      title="Маєте ідею для<br/><span class='text-cyan-400'>веб-додатка?</span>" 
+      description="Залиште заявку, і ми зв'яжемося з вами для безкоштовної консультації та прорахунку вашого проєкту." 
+    />
   </div>
 </template>
 
@@ -146,17 +129,4 @@ const appFeatures = [
 ]
 
 const headerTheme = useState('headerTheme')
-const contactSectionRef = ref(null)
-const { y } = useWindowScroll()
-
-watch(y, () => {
-  if (contactSectionRef.value) {
-    const rect = contactSectionRef.value.getBoundingClientRect()
-    headerTheme.value = rect.top <= 85 ? 'light' : 'dark'
-  }
-})
-
-onUnmounted(() => {
-  headerTheme.value = 'dark'
-})
 </script>

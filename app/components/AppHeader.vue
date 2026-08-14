@@ -17,6 +17,18 @@ const scrollProgress = computed(() => {
 
 const headerTheme = useState('headerTheme', () => 'dark')
 
+watch(y, () => {
+  if (!import.meta.client) return
+  
+  const firstSection = document.querySelector('section')
+  if (firstSection) {
+    const rect = firstSection.getBoundingClientRect()
+    // When the bottom of the first section reaches the header, make the header dark (headerTheme = 'light')
+    headerTheme.value = rect.bottom <= 85 ? 'light' : 'dark'
+  } else {
+    headerTheme.value = y.value > 50 ? 'light' : 'dark'
+  }
+})
 const items = computed(() => [{
   label: 'Послуги',
   to: '#services'
@@ -57,7 +69,7 @@ const items = computed(() => [{
     }"/>
 
     <template #right>
-      <UButton to="#contact" label="Обговорити проект" variant="solid" class="font-bold bg-white text-black hover:bg-cyan-400 hover:text-black transition-all px-6 py-2.5 rounded-none hidden md:inline-flex" />
+      <UButton to="#contact" label="Зв'язатися з нами" variant="solid" class="font-bold bg-white text-black hover:bg-cyan-400 hover:text-black transition-all px-6 py-2.5 rounded-none hidden md:inline-flex" />
     </template>
 
     <template #body>
