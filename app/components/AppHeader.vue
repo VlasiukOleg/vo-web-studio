@@ -51,7 +51,7 @@ const items = computed(() => [{
       headerTheme === 'light' ? 'bg-[#00042a]/95 border-b border-white/10 shadow-lg' : 'bg-transparent border-b border-white/5'
     ]"
     :ui="{
-      toggle: 'text-cyan-500 hover:text-cyan-400',
+      toggle: 'text-cyan-500 hover:text-cyan-400 scale-125 md:ml-4',
       content: 'bg-[#00042a] ring-1 ring-white/10',
       header: 'bg-[#00042a] border-b border-white/10',
       body: 'bg-[#00042a]'
@@ -81,7 +81,7 @@ const items = computed(() => [{
     </template>
 
     <template #body>
-      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" :ui="{ link: 'text-lg py-2.5 md:text-xl md:py-3' }" />
     </template>
     
     <template #bottom>

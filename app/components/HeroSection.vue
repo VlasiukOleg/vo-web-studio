@@ -1,5 +1,5 @@
 <template>
-  <section class="relative pt-24 pb-18 overflow-hidden bg-[#170a3c]">
+  <section class="relative pt-24 pb-14 md:pb-18 overflow-hidden bg-[#170a3c]">
     
     <!-- Marquee Background (Full width, dense) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -23,25 +23,25 @@
         </div>
         
         <!-- Glowing Header (Smaller) -->
-        <h1 class="font-noto text-4xl md:text-4xl lg:text-6xl font-black leading-[1.1] mb-6 uppercase tracking-tight text-white" style="text-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 80px rgba(168, 85, 247, 0.4);">
+        <h1 class="font-noto text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 uppercase tracking-tight text-white" style="text-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 80px rgba(168, 85, 247, 0.4);">
           Створюємо <br/><span class="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-400" style="text-shadow: none;">веб-рішення</span>,<br />
           які працюють <br/>на бізнес.
         </h1>
         
         <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-8 mb-10 max-w-xl">
-          <div class="shrink-0 flex flex-col items-center">
-            <div class="relative mb-3">
+          <div class="shrink-0 flex flex-row sm:flex-col items-center gap-4 sm:gap-0">
+            <div class="relative sm:mb-3">
               <!-- Світіння навколо фото -->
               <div class="absolute inset-0 bg-cyan-400 rounded-full blur-[10px] opacity-40 animate-pulse"></div>
               <img 
                 src="/video/vo-photo.jpg" 
-                class="relative w-22 h-22 rounded-full object-cover border-2 border-cyan-400/80 shadow-lg z-10" 
+                class="relative w-16 h-16 sm:w-22 sm:h-22 rounded-full object-cover border-2 border-cyan-400/80 shadow-lg z-10" 
                 alt="Власюк Олег"
               />
             </div>
-            <div class="text-center">
-              <div class="font-bold text-white text-sm">Власюк Олег</div>
-              <div class="text-cyan-400 text-[10px] mt-0.5 tracking-wider uppercase">Founder & CEO</div>
+            <div class="text-left sm:text-center">
+              <div class="font-bold text-white text-base">Власюк Олег</div>
+              <div class="text-cyan-400 text-[11px] mt-0.5 tracking-wider uppercase">Founder & CEO</div>
             </div>
           </div>
           <p class="text-base md:text-lg text-gray-300 leading-relaxed font-light flex-1 pt-1 md:pt-4">
