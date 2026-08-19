@@ -1,9 +1,17 @@
 <template>
   <UFooter class="bg-[#00769b] border-t border-white/10">
     <template #left>
-      <NuxtLink to="/" class="text-2xl font-black tracking-tighter text-white flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
-        <span class="w-6 h-6 bg-white rounded-sm flex items-center justify-center text-[#00769b] text-[10px]">VO</span>
-        WebStudio
+      <NuxtLink to="/" class="flex flex-col items-start cursor-pointer hover:opacity-80 transition-opacity">
+        <div class="flex items-center text-[20px] md:text-[24px] font-normal tracking-[0.05em] text-white leading-none mb-0.5">
+          <span>РОЗР</span>
+          <span class="relative flex items-center justify-center text-cyan-400 mx-[1px]">
+            <UIcon name="i-lucide-crosshair" class="w-[0.95em] h-[0.95em] drop-shadow-[0_0_6px_rgba(34,211,238,0.8)]" />
+          </span>
+          <span>БЛЕНО</span>
+        </div>
+        <div class="text-[7px] md:text-[8px] font-medium tracking-[0.18em] text-white/90 uppercase pl-1">
+          Студія цифрових рішень
+        </div>
       </NuxtLink>
     </template>
 
