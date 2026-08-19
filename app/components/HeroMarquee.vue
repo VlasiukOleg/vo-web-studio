@@ -5,7 +5,7 @@
       orientation="vertical"
       :overlay="false"
       :ui="{
-        root: '[--duration:40s] absolute w-[260px] -left-[90px] md:left-[10px] md:left-[350px] lg:left-[485px] -top-[200px] md:-top-[300px] h-[1440px] md:h-[1040px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
+        root: '[--duration:40s] absolute w-[260px] -left-[90px] md:left-[10px] md:left-[350px] lg:left-[485px] -top-[200px] md:-top-[300px] h-[1440px] md:h-[1110px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
       }"
     >
       <img
@@ -24,7 +24,7 @@
       orientation="vertical"
       :overlay="false"
       :ui="{
-        root: '[--duration:40s] absolute w-[260px] -top-[400px] left-[285px] md:left-[640px] lg:left-[800px] h-[1340px] md:h-[1160px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
+        root: '[--duration:40s] absolute w-[260px] -top-[400px] left-[285px] md:left-[655px] lg:left-[790px] h-[1340px] md:h-[1235px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
       }"
     >
       <img
@@ -39,42 +39,44 @@
         class="aspect-square object-cover bg-white/5 opacity-40 md:opacity-100 transition-opacity duration-300"
       />
     </UMarquee>
-    <UMarquee
-      reverse
-      orientation="vertical"
-      :overlay="false"
-      :ui="{
-        root: 'hidden lg:flex [--duration:40s] absolute w-[260px] -top-[300px] left-[1080px] h-[1060px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
-      }"
-    >
-      <img
-        v-for="i in [9, 10, 11, 12]"
-        :key="i"
-        :src="`/blocks/image${i}.webp`"
-        width="260"
-        height="260"
-        :alt="`Nuxt UI Screenshot ${i}`"
-        loading="eager"
-        class="aspect-square object-cover bg-white/5 opacity-40 md:opacity-100 transition-opacity duration-300"
-      />
-    </UMarquee>
-    <UMarquee
-      orientation="vertical"
-      :overlay="false"
-      :ui="{
-        root: 'hidden lg:flex [--duration:40s] absolute w-[260px] -top-[300px] left-[1380px] h-[1060px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
-      }"
-    >
-      <img
-        v-for="i in [9, 10, 11, 12]"
-        :key="i"
-        :src="`/blocks/image${i}.webp`"
-        width="260"
-        height="260"
-        :alt="`Nuxt UI Screenshot ${i}`"
-        loading="eager"
-        class="aspect-square object-cover bg-white/5 opacity-40 md:opacity-100 transition-opacity duration-300"
-      />
-    </UMarquee>
+    <div class="hidden lg:block">
+      <UMarquee
+        reverse
+        orientation="vertical"
+        :overlay="false"
+        :ui="{
+          root: '[--duration:40s] absolute w-[260px] -top-[300px] left-[1055px] h-[1200px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
+        }"
+      >
+        <img
+          v-for="i in [9, 10, 11, 12]"
+          :key="i"
+          :src="`/blocks/image${i}.webp`"
+          width="260"
+          height="260"
+          :alt="`Nuxt UI Screenshot ${i}`"
+          loading="eager"
+          class="aspect-square object-cover bg-white/5 opacity-40 md:opacity-100 transition-opacity duration-300"
+        />
+      </UMarquee>
+      <UMarquee
+        orientation="vertical"
+        :overlay="false"
+        :ui="{
+          root: '[--duration:40s] absolute w-[260px] -top-[300px] left-[1355px] h-[1165px] transform-3d rotate-x-35 rotate-y-0 rotate-z-15 [--gap:--spacing(6)]'
+        }"
+      >
+        <img
+          v-for="i in [1, 2, 3, 13]"
+          :key="i"
+          :src="`/blocks/image${i}.webp`"
+          width="260"
+          height="260"
+          :alt="`Nuxt UI Screenshot ${i}`"
+          loading="eager"
+          class="aspect-square object-cover bg-white/5 opacity-40 md:opacity-100 transition-opacity duration-300"
+        />
+      </UMarquee>
+    </div>
   </div>
 </template>
