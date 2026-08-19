@@ -106,11 +106,11 @@ const baseProject = [{
 },
 {
   title: '',
-  logo: '/works/horeca-da-logo.webp',
-  category: 'Landing Page / Лендінг',
-  description: 'Сучасний лендінг для компанії HoReCa Da, що надає професійні бухгалтерські та консалтингові послуги для ресторанного бізнесу. Розроблено стильний дизайн, зручну структуру для презентації послуг та оптимізовано форму зворотного зв\'язку.',
-  image: '/works/horeca-da.webp',
-  link: 'https://www.horeca-da.com.ua/'
+  logo: '/works/zvir-logo.png',
+  category: 'Website / Корпоративний сайт',
+  description: 'Сучасний веб-сайт для грумінг-салону «Звір» у Києві. Стильний дизайн, зручний запис на послуги, детальний прайс-лист та галерея робіт. Проект оптимізовано для мобільних пристроїв та швидкого завантаження.',
+  image: '/works/thezvir.webp',
+  link: 'https://www.thezvir.kyiv.ua/'
 },
 {
   title: '',

@@ -15,7 +15,7 @@
       </NuxtLink>
     </template>
 
-      <p class="text-white/80 text-sm font-medium">© {{ new Date().getFullYear() }} VO WebStudio. Всі права захищені.</p>
+      <p class="text-white/80 text-sm font-medium">© {{ new Date().getFullYear() }} РОЗРОБЛЕНО. Всі права захищені.</p>
 
     <template #right>
       <UButton icon="i-simple-icons-telegram" color="neutral" variant="ghost" to="#" class="text-white/70 hover:text-white hover:bg-white/10 transition-colors" aria-label="Telegram" />

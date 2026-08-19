@@ -16,6 +16,6 @@ const headerTheme = useState('headerTheme')
 
 
 useHead({
-  title: 'VO Web Studio - Розробка сайтів та веб-рішень'
+  title: 'РОЗРОБЛЕНО - Студія цифрових рішень'
 })
 </script>

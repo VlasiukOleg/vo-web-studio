@@ -174,6 +174,6 @@ const proFeatures = [
 const headerTheme = useState('headerTheme')
 
 useHead({
-  title: 'Розробка E-commerce під ключ | VO Web Studio'
+  title: 'Розробка E-commerce під ключ | РОЗРОБЛЕНО'
 })
 </script>

@@ -11,5 +11,12 @@ export default defineNuxtConfig({
     },
     display: 'swap',
     download: true // Завантажує шрифт локально при збірці (краще для швидкості)
+  },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
+      ]
+    }
   }
 });

@@ -144,6 +144,6 @@ const accordionItems = features.map(f => ({
 }))
 
 useHead({
-  title: 'Розробка Landing Page під ключ | VO Web Studio'
+  title: 'Розробка Landing Page під ключ | РОЗРОБЛЕНО'
 })
 </script>
