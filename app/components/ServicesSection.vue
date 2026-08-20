@@ -1,10 +1,10 @@
 <template>
-  <section id="services" class="py-18 relative bg-linear-to-r from-[#005c8a] via-[#1a367d] to-[#2c237a]">
+  <section id="services" class="py-10 md:py-18 relative bg-linear-to-r from-[#005c8a] via-[#1a367d] to-[#2c237a]">
     <UContainer>
-      <div class="text-center mb-12">
+      <div class="text-center mb-8 md:mb-12">
         <div class="inline-flex items-center gap-3 mb-4">
           <div class="w-12 h-0.5 bg-cyan-400"></div>
-          <span class="text-sm font-bold tracking-widest uppercase text-cyan-400">Експертиза</span>
+          <span class="text-sm font-bold tracking-widest uppercase text-cyan-400">Наші рішення</span>
         </div>
         <h2 class="font-noto text-4xl md:text-5xl font-black text-white mb-6">Наші послуги</h2>
         <p class="text-white/80 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
@@ -13,13 +13,13 @@
       </div>
       
       <!-- Tabs -->
-      <div class="flex justify-center flex-wrap gap-2 md:gap-4 mb-12">
+      <div class="flex justify-center flex-wrap gap-4 md:gap-4 mb-8 md:mb-12">
         <button 
           v-for="(service, index) in services" 
           :key="index"
           @click="activeTab = index"
           :class="[
-            'flex flex-col items-center justify-center px-6 py-4 min-w-30 transition-all duration-300 rounded-sm',
+            'flex flex-col items-center justify-center p-4 md:px-6 md:py-4 min-w-30 transition-all duration-300 rounded-sm',
             activeTab === index 
               ? 'bg-white text-[#1a365d]' 
               : 'bg-transparent text-white hover:bg-white/10'
@@ -32,9 +32,9 @@
 
       <!-- Content Area -->
       <div class="max-w-6xl mx-auto shadow-2xl overflow-hidden rounded-sm transition-all duration-500">
-        <div class="grid grid-cols-1 lg:grid-cols-6">
+        <div class="grid grid-cols-1 md:grid-cols-6">
           <!-- Left: Image -->
-          <div class="relative aspect-video lg:aspect-auto lg:col-span-2">
+          <div class="relative aspect-video md:aspect-auto md:col-span-2">
             <!-- Smooth fade between images -->
             <transition name="fade" mode="out-in">
               <img :key="activeTab" :src="services[activeTab].image" :alt="services[activeTab].title" class="w-full h-full object-cover absolute inset-0" />
@@ -42,7 +42,7 @@
           </div>
           
           <!-- Right: Text Block -->
-          <div class="bg-[#0e163b] p-10 flex flex-col justify-center text-white lg:col-span-4">
+          <div class="bg-[#0e163b] p-6 md:p-8 lg:p-10 flex flex-col justify-center text-white md:col-span-4">
             <transition name="fade" mode="out-in">
               <div :key="activeTab">
                 <h3 class="font-noto text-3xl font-bold mb-6 leading-tight">{{ services[activeTab].heading }}</h3>
