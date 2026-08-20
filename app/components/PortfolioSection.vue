@@ -1,7 +1,7 @@
 <template>
-  <section id="portfolio" class="py-18 relative bg-linear-to-bl from-[#005c8a] via-[#1a367d] to-[#2c237a]">
+  <section id="portfolio" class="py-10 md:py-18 relative bg-linear-to-bl from-[#005c8a] via-[#1a367d] to-[#2c237a]">
     <UContainer>
-      <div class="flex items-center gap-3 mb-12">
+      <div class="flex items-center gap-3 mb-6 md:mb-12">
         <div class="w-12 h-0.5 bg-cyan-500"></div>
         <span class="text-cyan-400 font-bold tracking-[0.2em] uppercase text-sm">Вибрані кейси</span>
       </div>
@@ -11,8 +11,8 @@
         :items="baseProject" 
         arrows 
         dots
-        :prev="{ class: 'bg-cyan-500 hover:bg-cyan-400 cursor-pointer text-[#050b14] rounded-full shadow-lg w-10 h-10 flex items-center justify-center -left-12 transition-all' }"
-        :next="{ class: 'bg-cyan-500 hover:bg-cyan-400 cursor-pointer text-[#050b14] rounded-full shadow-lg w-10 h-10 flex items-center justify-center -right-12 transition-all' }"
+       :prev="{ class: 'bg-cyan-500 hover:bg-cyan-400 cursor-pointer text-[#050b14] rounded-full shadow-lg w-10 h-10 flex items-center justify-center -left-2 md:-left-2 lg:-left-4 xl:-left-12 transition-all' }"
+        :next="{ class: 'bg-cyan-500 hover:bg-cyan-400 cursor-pointer text-[#050b14] rounded-full shadow-lg w-10 h-10 flex items-center justify-center -right-2 md:-right-2 lg:-right-4 xl:-right-12 transition-all' }"
         :ui="{ 
           item: 'basis-full', 
           container: 'gap-4', 
@@ -55,7 +55,7 @@
               </template>
             </div>
             
-            <p class="text-white/80 text-lg font-light leading-relaxed mb-8">
+            <p class="text-white/80 text-base md:text-lg font-light leading-relaxed mb-8">
               {{ item.description }}
             </p>
             <UButton 
@@ -67,7 +67,7 @@
               Перейти на сайт
             </UButton>
           </div>
-          <div class="order-1 lg:order-2 relative aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden group rounded-xl shadow-2xl">
+          <div class="order-1 lg:order-2 relative aspect-4/3 mx-auto w-full bg-linear-to-br max-w-135 from-gray-800 to-gray-900 overflow-hidden group rounded-xl shadow-2xl">
             <div class="absolute inset-0 bg-[#005c8a]/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay"></div>
             <!-- Abstract mockup representation -->
             <div class="absolute inset-4 sm:inset-8 md:inset-10 bg-[#050b14] shadow-2xl border border-white/10 overflow-hidden group-hover:scale-[1.02] transition-transform duration-700 ease-out flex flex-col rounded-t-md">
