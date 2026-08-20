@@ -31,16 +31,20 @@ watch(y, () => {
 })
 const items = computed(() => [{
   label: 'Послуги',
-  to: '#services'
+  to: '/#services',
+  active: false
 }, {
   label: 'Переваги',
-  to: '#why-us'
+  to: '/#why-us',
+  active: false
 }, {
   label: 'Наші роботи',
-  to: '#portfolio'
+  to: '/#portfolio',
+  active: false
 }, {
   label: 'Етапи розробки',
-  to: '#process'
+  to: '/#process',
+  active: false
 }])
 </script>
 
@@ -77,7 +81,7 @@ const items = computed(() => [{
     }"/>
 
     <template #right>
-      <UButton to="#contact" label="Зв'язатися з нами" variant="solid" class="font-bold bg-white text-black hover:bg-cyan-400 hover:text-black transition-all px-6 py-2.5 rounded-none hidden md:inline-flex" />
+      <UButton to="/#contact" label="Зв'язатися з нами" variant="solid" class="font-bold bg-white text-black hover:bg-cyan-400 hover:text-black transition-all px-6 py-2.5 rounded-none hidden md:inline-flex" />
     </template>
 
     <template #body>
