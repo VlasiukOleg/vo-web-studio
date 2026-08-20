@@ -1,11 +1,11 @@
 <template>
   <div 
     ref="cardRef"
-    class="relative group border-b border-gray-200 border-l-4 border-l-transparent transition-all duration-700 bg-white overflow-hidden flex flex-col justify-center min-h-[50vh] lg:min-h-[30vh] hover:bg-[#15234b]"
+    class="relative group border-b border-gray-200 border-l-4 border-l-transparent transition-all duration-700 bg-white overflow-hidden flex flex-col justify-center min-h-[20vh] md:min-h-[50vh] lg:min-h-[30vh] hover:bg-[#15234b]"
     :class="accentBorderClass"
   >
     <!-- animated wrapper for content -->
-    <div class="w-full h-full flex flex-col justify-center transition-all duration-1000 ease-out"
+    <div class="w-full flex-1 flex flex-col justify-center transition-all duration-1000 ease-out"
          :class="[delayClass, isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-24']">
       
       <div class="absolute top-0 right-0 w-2/3 h-full opacity-30 group-hover:opacity-50 transition-opacity duration-700 pointer-events-none" style="mask-image: linear-gradient(to right, transparent, black 80%); -webkit-mask-image: linear-gradient(to right, transparent, black 80%);">
