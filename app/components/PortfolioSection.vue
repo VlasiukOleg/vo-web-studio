@@ -17,6 +17,7 @@
           item: 'basis-full', 
           container: 'gap-4', 
           arrows: 'hidden md:flex',
+          dots: '-bottom-1 md:-bottom-7',
           dot: 'w-3 h-3 mx-1 rounded-full bg-white/30 transition-colors hover:bg-cyan-400/50'
         }" 
         class="w-full mx-auto portfolio-carousel"
@@ -101,7 +102,7 @@ const baseProject = [{
   logo: '/works/horeca-da-logo.webp',
   category: 'Landing Page / Лендінг',
   description: 'Сучасний лендінг для компанії HoReCa Da, що надає професійні бухгалтерські та консалтингові послуги для ресторанного бізнесу. Розроблено стильний дизайн, зручну структуру для презентації послуг та оптимізовано форму зворотного зв\'язку.',
-  image: '/works/horeca-da.webp',
+  image: '/works/horecada.webp',
   link: 'https://www.horeca-da.com.ua/'
 },
 {

@@ -1,9 +1,9 @@
 <template>
-  <section id="process" class="py-18 bg-[#00042a] relative">
+  <section id="process" class="py-10 md:py-18 bg-[#00042a] relative">
     <UContainer>
-      <div class="text-center max-w-3xl mx-auto mb-20">
+      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-20">
         <h2 class="font-noto text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">Етапи розробки</h2>
-        <p class="text-slate-400 text-lg leading-relaxed font-light">Прозорий, структурований процес, орієнтований на результат. Від ідеї до успішного запуску.</p>
+        <p class="text-slate-400 text-lg md:text-xl leading-relaxed font-light">Прозорий, структурований процес, орієнтований на результат. Від ідеї до успішного запуску.</p>
       </div>
 
       <div class="max-w-4xl mx-auto relative px-4 md:px-0">
