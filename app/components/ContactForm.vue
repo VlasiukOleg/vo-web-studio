@@ -1,18 +1,18 @@
 <template>
   <UForm :state="state" @submit="onSubmit" class="space-y-8">
-    <UFormField name="name">
-      <UInput v-model="state.name" size="xl" placeholder="Ваше ім'я" class="w-full !bg-transparent !border-b !border-white/20 !border-t-0 !border-x-0 !rounded-none focus:!border-cyan-400 !px-0 !shadow-none text-white text-lg transition-colors placeholder:text-gray-600 focus:!ring-0" />
+    <UFormField name="name" label="Ім'я" :ui="{ label: 'text-white dark:text-white' }">
+      <UInput v-model="state.name" size="xl" placeholder="Ваше ім'я" class="w-full" :ui="{ base: 'transition-colors focus:ring-brand-500' }" />
     </UFormField>
     
-    <UFormField name="contact">
-      <UInput v-model="state.contact" size="xl" placeholder="Email або Telegram" class="w-full !bg-transparent !border-b !border-white/20 !border-t-0 !border-x-0 !rounded-none focus:!border-cyan-400 !px-0 !shadow-none text-white text-lg transition-colors placeholder:text-gray-600 focus:!ring-0" />
+    <UFormField name="contact" label="Контактні дані" :ui="{ label: 'text-white dark:text-white' }">
+      <UInput v-model="state.contact" size="xl" placeholder="Email або Telegram" class="w-full" :ui="{ base: 'transition-colors focus:ring-brand-500' }" />
     </UFormField>
     
-    <UFormField name="message">
-      <UTextarea v-model="state.message" :rows="3" size="xl" placeholder="Розкажіть про ваш проект" class="w-full !bg-transparent !border-b !border-white/20 !border-t-0 !border-x-0 !rounded-none focus:!border-cyan-400 !px-0 !shadow-none text-white text-lg transition-colors placeholder:text-gray-600 focus:!ring-0" />
+    <UFormField name="message" label="Повідомлення" :ui="{ label: 'text-white dark:text-white' }">
+      <UTextarea v-model="state.message" :rows="3" size="xl" placeholder="Розкажіть про ваш проект" class="w-full" :ui="{ base: 'transition-colors focus:ring-brand-500' }" />
     </UFormField>
     
-    <UButton type="submit" size="xl" color="gray" class="w-full bg-cyan-500 text-[#050b14] hover:bg-cyan-400 font-black px-10 py-5 text-lg justify-center rounded-none uppercase tracking-wider group transition-all mt-8">
+    <UButton type="submit" size="xl" class="w-full  text-[#050b14] hover:bg-cyan-400 font-black px-10 py-5 text-base md:text-lg justify-center rounded-none uppercase tracking-wider group transition-all mt-4 md:mt-8">
       Надіслати заявку
     </UButton>
   </UForm>

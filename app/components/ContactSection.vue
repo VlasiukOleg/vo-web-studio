@@ -1,15 +1,15 @@
 <template>
-  <section id="contact" class="py-18 relative bg-white">
+  <section id="contact" class="py-10 md:py-18 relative bg-white">
     <UContainer>
-      <div class="bg-[#0a1120] border border-white/10 p-10 md:p-20 relative overflow-hidden rounded-2xl shadow-2xl">
+      <div class="bg-[#0a1120] border border-white/10 p-10 md:p-16 lg:p-20 relative overflow-hidden rounded-2xl shadow-2xl">
         <!-- Glitch / Glow effects -->
         <div class="absolute top-0 right-0 w-125 h-125 bg-cyan-500/10 blur-[100px] pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-125 h-125 bg-purple-500/10 blur-[100px] pointer-events-none"></div>
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 relative z-10">
           <div>
             <h2 class="font-noto text-4xl md:text-5xl font-black uppercase tracking-tight mb-6 text-white" v-html="title"></h2>
-            <p class="text-gray-400 text-lg md:text-xl font-light mb-12" v-html="description"></p>
+            <p class="text-gray-400 text-lg md:text-xl font-light mb-8 md:mb-12" v-html="description"></p>
             
             <div class="flex flex-row gap-8">
               <a href="https://t.me/vowebstudio" target="_blank" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity group">
