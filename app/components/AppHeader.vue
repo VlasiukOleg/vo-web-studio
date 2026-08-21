@@ -65,7 +65,7 @@ const items = computed(() => [{
       <NuxtLink to="/" class="flex flex-col items-start cursor-pointer hover:opacity-80 transition-opacity">
         <div class="flex items-center text-[20px] md:text-[24px] font-normal tracking-[0.05em] text-white leading-none mb-0.5">
           <span>РОЗР</span>
-          <span class="relative flex items-center justify-center text-cyan-400 mx-[1px]">
+          <span class="relative flex items-center justify-center text-cyan-400 mx-px">
             <UIcon name="i-lucide-crosshair" class="w-[0.95em] h-[0.95em] drop-shadow-[0_0_6px_rgba(34,211,238,0.8)]" />
           </span>
           <span>БЛЕНО</span>

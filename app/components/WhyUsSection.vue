@@ -3,19 +3,19 @@
     <div class="flex flex-col lg:flex-row w-full relative items-start">
       
       <!-- Left Column (Sticky on Desktop) -->
-      <div class="w-full lg:w-1/2 bg-[#def3ff] lg:bg-transparent border-r border-blue-200 lg:sticky lg:top-15 h-fit flex flex-col p-10 md:p-16 lg:p-18 overflow-hidden z-10">
-        <div class="max-w-xl mx-auto lg:mx-0 lg:ml-auto w-full lg:pr-10 relative">
+      <div class="w-full lg:w-1/2 bg-[#def3ff] lg:bg-transparent border-r border-blue-200 lg:sticky lg:top-15 h-fit flex flex-col p-10 md:p-16 overflow-hidden z-10">
+        <div class="mx-auto lg:mx-0 lg:ml-auto w-full lg:pr-10 relative">
           <div class="inline-flex items-center gap-3 mb-4">
             <div class="w-12 h-0.5 bg-[#00a8ff]"></div>
             <span class="text-[#00a8ff] font-bold tracking-widest uppercase text-sm">Переваги технології</span>
           </div>
-          <h2 class="font-noto text-4xl md:text-5xl lg:text-[3.5rem] font-black text-[#15234b] mb-8 leading-[1.1] tracking-tight">
-            Чому варто обрати кастомну розробку?
+          <h2 class="font-noto text-3xl md:text-5xl font-black text-[#15234b] mb-8 leading-[1.1] tracking-tight">
+            Чому ми не використовуємо конструктори сайтів?
           </h2>
           
           <div class="space-y-6 text-[#2d4263] text-lg font-medium leading-relaxed mb-10">
             <p>
-              Ми створюємо кастомні веб-продукти, які працюють на вас, а не обмежують готовими шаблонами. Поєднуючи надійність серверних технологій із гнучкістю інтерактивних інтерфейсів, ми забезпечуємо максимальну швидкість, безпеку та повну готовність вашого проєкту до майбутнього масштабування.
+              Замість того, щоб підлаштовувати ваш бізнес під обмеження масових платформ на кшталт Wix чи WordPress, ми пишемо чистий код вручну. Такий підхід дозволяє зробити швидкий, зручний і гнучкий продукт, який можна розвивати разом із вашим бізнесом.
             </p>
           </div>
           
