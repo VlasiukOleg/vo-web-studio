@@ -18,8 +18,8 @@
       <p class="text-white/80 text-sm font-medium">© {{ new Date().getFullYear() }} РОЗРОБЛЕНО. Всі права захищені.</p>
 
     <template #right>
-      <UButton icon="i-simple-icons-telegram" color="neutral" variant="ghost" to="#" class="text-white/70 hover:text-white hover:bg-white/10 transition-colors" aria-label="Telegram" />
-      <UButton icon="i-simple-icons-viber" color="neutral" variant="ghost" to="#" class="text-white/70 hover:text-white hover:bg-white/10 transition-colors" aria-label="Instagram" />
+      <UButton icon="i-simple-icons-telegram" color="neutral" variant="ghost" to="https://t.me/vl_oleg_frontend" target="_blank" class="text-white/70 hover:text-white hover:bg-white/10 transition-colors" aria-label="Telegram" />
+      <UButton icon="i-simple-icons-viber" color="neutral" variant="ghost" to="viber://chat?number=%2B380632790437" target="_blank" class="text-white/70 hover:text-white hover:bg-white/10 transition-colors" aria-label="Viber" />
     </template>
   </UFooter>
 </template>

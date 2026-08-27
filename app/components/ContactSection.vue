@@ -12,14 +12,14 @@
             <p class="text-gray-400 text-lg md:text-xl font-light mb-8 md:mb-12" v-html="description"></p>
             
             <div class="flex flex-row gap-8">
-              <a href="https://t.me/vowebstudio" target="_blank" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity group">
+              <a href="https://t.me/vl_oleg_frontend" target="_blank" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity group">
                 <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform shrink-0">
                   <UIcon name="i-simple-icons-telegram" class="w-6 h-6" />
                 </div>
                 <span class="text-lg font-bold text-white">Telegram</span>
               </a>
               
-              <a href="viber://chat?number=%2B380991234567" target="_blank" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity group">
+              <a href="viber://chat?number=%2B380632790437" target="_blank" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity group">
                 <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform shrink-0">
                   <UIcon name="i-simple-icons-viber" class="w-6 h-6" />
                 </div>
