@@ -33,11 +33,15 @@
             <div class="relative sm:mb-3">
               <!-- Світіння навколо фото -->
               <div class="absolute inset-0 bg-cyan-400 rounded-full blur-[10px] opacity-40 animate-pulse"></div>
-              <img 
-                src="/video/vo-photo.jpg" 
-                class="relative w-16 h-16 sm:w-22 sm:h-22 rounded-full object-cover border-2 border-cyan-400/80 shadow-lg z-10" 
-                alt="Власюк Олег"
-              />
+              
+              <!-- Контейнер для обрізки збільшеного фото -->
+              <div class="relative w-16 h-16 sm:w-22 sm:h-22 rounded-full overflow-hidden border-2 border-cyan-400/80 shadow-lg z-10">
+                <img 
+                  src="/video/vo-photo.jpg" 
+                  class="w-full h-full object-cover scale-125" 
+                  alt="Власюк Олег"
+                />
+              </div>
             </div>
             <div class="text-left sm:text-center">
               <div class="font-bold text-white text-base">Власюк Олег</div>

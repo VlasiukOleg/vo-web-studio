@@ -1,5 +1,21 @@
+<script setup>
+import { ref } from 'vue'
+import { useIntersectionObserver } from '@vueuse/core'
+
+const marqueeContainer = ref(null)
+const isVisible = ref(true)
+
+useIntersectionObserver(
+  marqueeContainer,
+  ([{ isIntersecting }]) => {
+    isVisible.value = isIntersecting
+  },
+  { threshold: 0 }
+)
+</script>
+
 <template>
-  <div class="absolute inset-0 w-full h-full overflow-hidden">
+  <div ref="marqueeContainer" class="absolute inset-0 w-full h-full overflow-hidden" :class="{ 'marquee-paused': !isVisible }">
     <UMarquee
       reverse
       orientation="vertical"
@@ -80,3 +96,10 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Pause all animations inside the container when out of viewport */
+.marquee-paused :deep(*) {
+  animation-play-state: paused !important;
+}
+</style>

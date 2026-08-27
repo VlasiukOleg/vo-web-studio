@@ -32,7 +32,7 @@ onUnmounted(() => {
 <template>
   <Transition name="scroll-btn">
     <button
-      v-if="isVisible && $route.path === '/'"
+      v-if="isVisible"
       id="scroll-to-top"
       aria-label="Піднятися вгору"
       class="scroll-to-top-btn"
