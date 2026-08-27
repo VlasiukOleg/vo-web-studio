@@ -2,7 +2,7 @@
   <UCard 
     :ui="{ 
       root: ['mt-8 mb-16 max-w-md mx-auto bg-white/5 backdrop-blur-md rounded-3xl relative overflow-hidden transition-all duration-500 flex flex-col justify-center min-h-[180px]', themeColors.border, themeColors.hoverBorder, themeColors.shadow, themeColors.hoverShadow].join(' '),
-      body: 'p-3 h-full flex flex-col justify-center w-full z-10',
+      body: 'p-4 md:p-6 h-full flex flex-col justify-center w-full z-10',
       header: 'hidden',
       footer: 'hidden'
     }"
@@ -12,8 +12,12 @@
     <div class="absolute -bottom-10 -left-10 w-40 h-40 rounded-full blur-2xl pointer-events-none z-0" :class="themeColors.blobBottom"></div>
     
     <!-- Content -->
-    <div class="uppercase tracking-widest text-sm md:text-base font-bold mb-3 relative z-10" :class="themeColors.text">
-      {{ subtitle }}
+    <div v-if="title" class="font-black text-white text-xl md:text-2xl uppercase tracking-wide mb-1 relative z-10">
+      {{ title }}
+    </div>
+    
+    <div v-if="description" class="text-white/80 text-xs md:text-sm font-medium mb-4 relative z-10">
+      {{ description }}
     </div>
     
     <div class="font-black text-white relative z-10 leading-tight" :class="priceSizeClass">
@@ -31,9 +35,13 @@ const props = defineProps({
     default: 'cyan',
     validator: (v) => ['cyan', 'purple'].includes(v)
   },
-  subtitle: {
+  title: {
     type: String,
-    required: true
+    default: ''
+  },
+  description: {
+    type: String,
+    default: ''
   },
   price: {
     type: String,
@@ -41,7 +49,7 @@ const props = defineProps({
   },
   suffix: {
     type: String,
-    required: true
+    default: ''
   },
   isCustom: {
     type: Boolean,
@@ -73,15 +81,12 @@ const colors = {
 const themeColors = computed(() => colors[props.color])
 
 const priceSizeClass = computed(() => {
-  if (props.price.length > 20) {
-    return 'text-2xl md:text-3xl'
-  }
-  return props.isCustom ? 'text-4xl md:text-4xl' : 'text-5xl md:text-5xl'
+  return props.isCustom ? 'text-2xl md:text-3xl mt-2' : 'text-4xl md:text-5xl mt-1'
 })
 
 const formattedPrice = computed(() => {
   if (props.isCustom) {
-    return `${props.price}<br><span class="text-2xl md:text-3xl text-gray-400">${props.suffix}</span>`
+    return `<span class="text-gray-400">${props.price}</span><br><span class="text-sm md:text-base tracking-widest uppercase text-gray-400 block mt-2">${props.suffix}</span>`
   }
   return `${props.price} <span class="text-2xl md:text-3xl text-gray-400">${props.suffix}</span>`
 })

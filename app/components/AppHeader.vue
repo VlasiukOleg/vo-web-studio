@@ -100,9 +100,3 @@ const items = computed(() => [{
     </template>
   </UHeader>
 </template>
-
-<style>
-html {
-  scroll-behavior: smooth;
-}
-</style>

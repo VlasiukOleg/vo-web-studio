@@ -18,12 +18,12 @@
           />
         </div>
         <div class="max-w-5xl mx-auto text-center">
-          <h1 class="font-noto text-5xl md:text-6xl font-black leading-[1.1] mb-8 uppercase tracking-tight text-white">
+          <h1 class="font-noto text-4xl md:text-5xl font-black leading-[1.1] mb-8 uppercase tracking-tight text-white">
             Розробка сучасних<br/>
             <span class="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">Інтернет-магазинів</span>
           </h1>
           
-          <p class="text-xl md:text-2xl text-gray-300 font-light mb-12 leading-relaxed max-w-4xl mx-auto">
+          <p class="text-lg md:text-xl text-gray-300 font-light mb-12 leading-relaxed max-w-4xl mx-auto">
             Від швидкого старту для малого бізнесу до масштабованих e-commerce платформ зі складними інтеграціями. Адаптивний дизайн, швидке завантаження та зручна адмінка.
           </p>
 
@@ -38,14 +38,15 @@
                 <!-- Price Card Start -->
                 <PriceCard 
                   color="cyan"
-                  subtitle="До 100 товарів"
+                  title="БАЗОВА ПЛАТФОРМА"
+                  description="*Без кабінету покупця та онлайн-оплат"
                   price="20 000"
                   suffix="грн"
                 />
 
                 <!-- Interactive Accordion (Features Start) -->
                 <div class="mb-16 max-w-3xl mx-auto text-left relative z-10">
-                  <h2 class="font-noto text-3xl font-black text-white mb-8 text-center">Що входить у тариф Start?</h2>
+                  <h2 class="font-noto text-3xl font-black text-white mb-8 text-center">Що входить у Start?</h2>
                   <AppAccordion :items="startFeatures" />
                 </div>
                 
@@ -60,21 +61,25 @@
                 <!-- Price Card Pro -->
                 <PriceCard 
                   color="purple"
-                  subtitle="Необмежена кількість"
-                  price="Індивідуальний"
-                  suffix="розрахунок"
+                  title="РОЗШИРЕНА ПЛАТФОРМА"
+                  description=""
+                  price="ІНДИВІДУАЛЬНИЙ РОЗРАХУНОК"
+                  suffix=""
                   :is-custom="true"
                 />
 
                 <!-- Interactive Accordion (Features Pro Base) -->
-                <div class="mb-12 max-w-3xl mx-auto text-left relative z-10">
-                  <h2 class="font-noto text-3xl font-black text-white mb-8 text-center">Що входить у тариф Pro?</h2>
-                  <AppAccordion :items="startFeatures" />
+                <div class="mb-10 max-w-3xl mx-auto text-center relative z-10">
+                  <h2 class="font-noto text-3xl font-black text-white mb-6">Що входить у Pro?</h2>
+                  <div class="bg-white/5 backdrop-blur-sm border border-white/10 py-4 px-8 rounded-2xl inline-flex items-center gap-3">
+                    <span class="text-2xl">✅</span>
+                    <span class="text-gray-200 text-lg md:text-xl font-medium">Все, що входить у пакет <strong class="text-cyan-400">Start</strong></span>
+                  </div>
                 </div>
 
                 <!-- Interactive Accordion (Features Pro Addons) -->
                 <div class="mb-16 max-w-3xl mx-auto text-left relative z-10">
-                  <h2 class="font-noto text-3xl font-black text-purple-400 mb-8 text-center">Що ще можна додати?</h2>
+                  <h3 class="font-noto text-2xl font-bold text-purple-400 mb-8 text-center">Що ми можемо додати до вашого магазину:</h3>
                   <AppAccordion :items="proFeatures" />
                 </div>
                 
@@ -145,8 +150,8 @@ import { ref, onUnmounted, watch } from 'vue'
 import { useWindowScroll } from '@vueuse/core'
 
 const tabs = [
-  { label: 'Тариф Start', slot: 'start' },
-  { label: 'Тариф Pro', slot: 'pro' }
+  { label: 'Start', slot: 'start' },
+  { label: 'Pro', slot: 'pro' }
 ]
 
 const startFeatures = [

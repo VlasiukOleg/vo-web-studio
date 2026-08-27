@@ -18,12 +18,12 @@
           />
         </div>
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="font-noto text-5xl md:text-6xl font-black leading-[1.1] mb-8 uppercase tracking-tight text-white">
+          <h1 class="font-noto text-4xl md:text-5xl font-black leading-[1.1] mb-8 uppercase tracking-tight text-white">
             <span class="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">AI-інтеграції</span><br/>
             для сайтів та бізнесу
           </h1>
           
-          <p class="text-xl md:text-2xl text-gray-300 font-light mb-12 leading-relaxed max-w-3xl mx-auto">
+          <p class="text-lg md:text-xl text-gray-300 font-light mb-12 leading-relaxed max-w-3xl mx-auto">
             Зробіть свій веб-проект розумнішим. Ми впроваджуємо сучасні алгоритми штучного інтелекту, які автоматизують рутину, покращують клієнтський досвід та виділяють вас серед конкурентів.
           </p>
           
