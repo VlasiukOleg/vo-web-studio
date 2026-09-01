@@ -103,6 +103,13 @@
 
 <script setup>
 import { ref, onUnmounted, watch } from 'vue'
+
+useHead({
+  title: 'AI-інтеграції - РОЗРОБЛЕНО',
+  meta: [
+    { name: 'description', content: 'AI-інтеграції для сайтів та бізнесу: AI-чат, розпізнавання документів, візуальні примірочні та генератори контенту від студії РОЗРОБЛЕНО.' }
+  ]
+})
 import { useWindowScroll } from '@vueuse/core'
 
 const appFeatures = [

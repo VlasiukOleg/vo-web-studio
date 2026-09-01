@@ -99,6 +99,13 @@
 
 <script setup>
 import { ref, onUnmounted, watch } from 'vue'
+
+useHead({
+  title: 'Веб-додатки (SPA) - РОЗРОБЛЕНО',
+  meta: [
+    { name: 'description', content: 'Розробка веб-додатків під ваші задачі: онлайн-калькулятори, дашборди, системи бронювання та інші рішення від студії РОЗРОБЛЕНО.' }
+  ]
+})
 import { useWindowScroll } from '@vueuse/core'
 
 const appFeatures = [

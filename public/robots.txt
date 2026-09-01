@@ -1,2 +1,5 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Disallow: /brief
+Allow: /
+
+Sitemap: https://www.rozrobleno.com.ua/sitemap.xml

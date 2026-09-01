@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { ref, reactive, computed, watch } from 'vue'
 
+useHead({
+  title: 'Заповнити бриф - РОЗРОБЛЕНО',
+  meta: [
+    { name: 'description', content: 'Заповніть бриф для початку роботи над вашим проєктом в студії РОЗРОБЛЕНО.' }
+  ]
+})
+
 const currentStep = ref(1)
 const carouselRef = ref()
 

@@ -21,9 +21,9 @@ useSeoMeta({
   description: 'Комплексні рішення для розвитку вашого бізнесу в інтернеті. Створення сайтів від прототипу до успішного релізу.',
   ogTitle: 'РОЗРОБЛЕНО - Студія цифрових рішень',
   ogDescription: 'Комплексні рішення для розвитку вашого бізнесу в інтернеті. Створення сайтів від прототипу до успішного релізу.',
-  ogImage: 'https://vo-web-studio.vercel.app/og-image.png',
+  ogImage: 'https://www.rozrobleno.com.ua/og-image.png',
   ogSiteName: 'РОЗРОБЛЕНО',
-  ogUrl: 'https://vo-web-studio.vercel.app/',
+  ogUrl: 'https://www.rozrobleno.com.ua/',
   twitterCard: 'summary_large_image',
 })
 </script>
