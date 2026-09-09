@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@nuxtjs/google-fonts'],
+  modules: ['@nuxt/ui', '@nuxtjs/google-fonts', 'nuxt-gtag'],
   css: ['~/assets/css/main.css'],
   googleFonts: {
     families: {
@@ -18,6 +18,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
       ]
     }
+  },
+  gtag: {
+    id: 'GTM-5DTCLZZH', // Or replace with your G-XXXXXX Measurement ID
   },
   runtimeConfig: {
     telegramBotToken: '',
