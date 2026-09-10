@@ -92,7 +92,6 @@
     <!-- CTA Form Section -->
     <ContactSection 
       title="Маєте ідею для<br/><span class='text-cyan-400'>веб-додатка?</span>" 
-      description="Залиште заявку, і ми зв'яжемося з вами для безкоштовної консультації та прорахунку вашого проєкту." 
     />
   </div>
 </template>

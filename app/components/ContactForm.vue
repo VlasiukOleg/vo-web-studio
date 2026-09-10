@@ -50,7 +50,7 @@ const serviceMap = {
   '/landing': 'Лендінги',
   '/ecommerce': 'E-Commerce',
   '/web-apps': 'Веб-додатки',
-  '/ai-integrations': 'AI-Інтеграції'
+  '/ai-integrations': 'AI-Рішення'
 }
 
 const serviceOptions = Object.values(serviceMap)

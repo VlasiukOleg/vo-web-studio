@@ -13,13 +13,13 @@
           <UBreadcrumb 
             :items="[
               { label: 'Головна', to: '/', class: 'text-gray-400 hover:text-white transition-colors' }, 
-              { label: 'AI-Інтеграції', class: 'text-cyan-400 font-bold' }
+              { label: 'AI-Рішення', class: 'text-cyan-400 font-bold' }
             ]" 
           />
         </div>
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="font-noto text-4xl md:text-5xl font-black leading-[1.1] mb-8 uppercase tracking-tight text-white">
-            <span class="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">AI-інтеграції</span><br/>
+            <span class="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">AI-рішення</span><br/>
             для сайтів та бізнесу
           </h1>
           
@@ -96,7 +96,6 @@
     <ContactSection 
       id="contact"
       title="Готові інтегрувати<br/><span class='text-cyan-400'>ШІ</span> у ваш бізнес?" 
-      description="Розкажіть про свої задачі, і ми підкажемо, як за допомогою штучного інтелекту можна оптимізувати ваші процеси." 
     />
   </div>
 </template>
@@ -105,9 +104,9 @@
 import { ref, onUnmounted, watch } from 'vue'
 
 useHead({
-  title: 'AI-інтеграції - РОЗРОБЛЕНО',
+  title: 'AI-рішення - РОЗРОБЛЕНО',
   meta: [
-    { name: 'description', content: 'AI-інтеграції для сайтів та бізнесу: AI-чат, розпізнавання документів, візуальні примірочні та генератори контенту від студії РОЗРОБЛЕНО.' }
+    { name: 'description', content: 'AI-рішення для сайтів та бізнесу: AI-чат, розпізнавання документів, візуальні примірочні та генератори контенту від студії РОЗРОБЛЕНО.' }
   ]
 })
 import { useWindowScroll } from '@vueuse/core'
