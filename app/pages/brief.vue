@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, reactive, computed, watch } from 'vue'
 
-useHead({
+useHead(() => ({
   title: 'Заповнити бриф - РОЗРОБЛЕНО',
   meta: [
     { name: 'description', content: 'Заповніть бриф для початку роботи над вашим проєктом в студії РОЗРОБЛЕНО.' }
   ]
-})
+}))
 
 const currentStep = ref(1)
 const carouselRef = ref()
@@ -34,6 +34,8 @@ const form = reactive({
   buttonShape: 'Злегка згладжені (8px)',
   cardStyle: 'Glassmorphic (Напівпрозоре скло)',
   iconType: 'Мінімалістичні лінійні',
+  headingFont: 'Inter',
+  bodyFont: 'Inter',
   sections: [] as string[],
   likedSites: '',
   likedFeatures: '',
@@ -111,6 +113,12 @@ const cardOptions = [
   'Flat & Border (Тільки тонка рамка)'
 ]
 
+const allFonts = [
+  'Inter', 'Roboto', 'Nunito', 'DM Sans', 'Outfit', 'Poppins', 'Raleway', 'Montserrat', 'Public Sans', 'Manrope',
+  'Playfair Display', 'Merriweather', 'Lora', 'PT Serif', 'Source Serif 4',
+  'Space Mono', 'Fira Code', 'JetBrains Mono', 'IBM Plex Mono'
+]
+
 const iconOptions = [
   'Мінімалістичні лінійні',
   'Заповнені кольорові 2D',
@@ -175,8 +183,21 @@ const previewTextColor = computed(() => {
 })
 
 const previewContainerStyle = computed(() => ({
-  backgroundColor: previewBgColor.value
+  backgroundColor: previewBgColor.value,
+  fontFamily: `"${form.bodyFont}", sans-serif`
 }))
+
+const previewHeadingStyle = computed(() => ({
+  color: previewTextColor.value,
+  fontFamily: `"${form.headingFont}", sans-serif`
+}))
+
+const googleFontsImports = computed(() => {
+  const fonts = new Set([form.headingFont, form.bodyFont])
+  return Array.from(fonts)
+    .map(f => `@import url('https://fonts.googleapis.com/css2?family=${f.replace(/ /g, '+')}&display=swap');`)
+    .join('\n')
+})
 
 const previewContainerClass = computed(() => {
   if (derivedStyleVibe.value.includes('Dark Tech')) return 'border-slate-800'
@@ -242,6 +263,7 @@ ${form.projectContext || 'Not specified.'}
 ${referencesText}
 Style: ${derivedStyleVibe.value}.
 Color Palette: ${colorOutput}.
+Typography: Heading - ${form.headingFont}, Body - ${form.bodyFont}.
 UI Details: Button shape - ${form.buttonShape}, Card style - ${form.cardStyle}, Icon type - ${form.iconType}.
 Structure:
 1. Hero section matching Variant ${form.heroVariant} (from library).
@@ -274,6 +296,11 @@ const copyPrompt = () => {
 
 <template>
   <div class="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white py-12">
+    <!-- Dynamic Font Loading for Live Preview -->
+    <component :is="'style'">
+      {{ googleFontsImports }}
+    </component>
+
     <UContainer class="max-w-7xl">
       <!-- Header -->
       <div class="mb-12 text-center">
@@ -421,6 +448,17 @@ const copyPrompt = () => {
               <UFormField label="3. Стиль карток / блоків" class="font-bold">
                 <URadioGroup v-model="form.cardStyle" :items="cardOptions" class="flex flex-wrap gap-6 mt-2" :ui="{ label: 'font-normal' }" />
               </UFormField>
+              <USeparator />
+              <UFormField label="4. Шрифти (Typography)" class="font-bold">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-2 font-normal">
+                  <UFormField label="Шрифт заголовків">
+                    <USelect v-model="form.headingFont" :items="allFonts" placeholder="Оберіть шрифт..." class="w-full" size="lg" />
+                  </UFormField>
+                  <UFormField label="Шрифт тексту">
+                    <USelect v-model="form.bodyFont" :items="allFonts" placeholder="Оберіть шрифт..." class="w-full" size="lg" />
+                  </UFormField>
+                </div>
+              </UFormField>
             </div>
 
             <!-- Right: Live Preview (col-span-2) -->
@@ -433,7 +471,7 @@ const copyPrompt = () => {
                   :style="previewContainerStyle"
                 >
                   <div>
-                    <h4 class="text-2xl font-black mb-2 transition-colors duration-500" :style="{ color: previewTextColor }">Build Your SaaS</h4>
+                    <h4 class="text-2xl font-black mb-2 transition-all duration-500" :style="previewHeadingStyle">Build Your SaaS</h4>
                     <p class="text-sm mb-4 opacity-80 transition-colors duration-500" :style="{ color: previewTextColor }">Select options on the left to see how your UI components will look.</p>
                   </div>
                   
@@ -461,7 +499,7 @@ const copyPrompt = () => {
                     <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4 transition-colors duration-500" :style="previewIconBgStyle">
                       <UIcon name="i-heroicons-cube" class="w-6 h-6 transition-colors duration-500" :style="{ color: previewAccentColor }" />
                     </div>
-                    <h5 class="font-bold text-lg mb-2 transition-colors duration-500" :style="{ color: previewTextColor }">Feature Title</h5>
+                    <h5 class="font-bold text-lg mb-2 transition-all duration-500" :style="previewHeadingStyle">Feature Title</h5>
                     <p class="text-sm opacity-80 transition-colors duration-500" :style="{ color: previewTextColor }">
                       This is how a standard feature card looks in your selected style. Try changing colors or shapes!
                     </p>

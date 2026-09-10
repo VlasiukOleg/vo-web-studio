@@ -30,6 +30,7 @@ import { vMaska } from 'maska/vue'
 
 const route = useRoute()
 const toast = useToast()
+const { gtag } = useGtag()
 
 const isSubmitting = ref(false)
 
@@ -94,6 +95,14 @@ async function onSubmit(event: FormSubmitEvent<any>) {
       color: 'primary',
       icon: 'i-heroicons-check-circle'
     })
+
+    // Відправка події в GTM
+    if (gtag) {
+      gtag('event', 'thanks', {
+        'event_category': 'form',
+        'event_label': 'contact_form'
+      })
+    }
 
     // Очищення форми
     state.name = ''
